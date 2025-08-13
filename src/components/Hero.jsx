@@ -6,21 +6,28 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 function Hero() {
 
     useGSAP(()=>{
-        const splitSlogan=new SplitText('.slogan h1',{type:'lines'})
+        const splitSlogan=new SplitText('.slogan h1',{type:'lines,words'})
         const splitBrief=new SplitText('.brief p',{type:'lines'})
 
         gsap.from(splitSlogan.lines,{
             opacity:0,
             yPercent:100,
             ease:'power1.inOut',
-            stagger:.04,
+            stagger:.06,
+            duration:1
+        })
+        gsap.from(splitSlogan.words,{
+            opacity:0,
+            yPercent:100,
+            ease:'power1.inOut',
+            stagger:.08,
             duration:1
         })
         gsap.from(splitBrief.lines,{
             opacity:0,
             yPercent:100,
             ease:'power1.inOut',
-            stagger:.04,
+            stagger:.06,
             duration:1,
             delay:1
         })
