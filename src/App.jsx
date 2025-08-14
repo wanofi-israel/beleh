@@ -10,7 +10,7 @@ function App() {
     <div className='app'>
     <Navbar/>
     <Hero/>
-    <div className='service-section'>
+    <div className='service-section-cards'>
     <ServiceCard/>
     <ServiceCard/>
     <ServiceCard/>

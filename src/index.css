@@ -46,7 +46,8 @@
     width: 100%;
     height: 100dvh;
     background-color: var(--color-primary-blue-dark);
-    overflow: hidden;
+    overflow-y:scroll;
+    overflow-x: clip;
 }
 
 .navbar {
@@ -129,6 +130,11 @@
 
 }
 
+.services{
+
+    display: flex;
+    flex-direction: column;
+}
 
 
 .servicecard{
@@ -157,13 +163,12 @@
     font-size: 2rem;
 }
 
-.service-section{
+.service-section-cards{
     display: flex;
     flex-direction: row;
     gap: 50px;
     flex-flow: wrap;
     justify-content: center;
     align-items: flex-start;
-    display: flex
-;
+    display: flex;
 }
