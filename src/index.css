@@ -62,6 +62,7 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+        font-size: 1.2em;
 
         ul {
             display: flex;
@@ -69,16 +70,18 @@
             list-style: none;
 
             li {
-                font-size: .8em;
                 padding: 6px 12px;
             }
         }
 
         .cta {
-            padding: 12px 12px;
+            padding: 18px 12px;
+    font-family: FKGrosteskLight, sans-serif;
             border: none;
             background-color: var(--color-primary-blue-darker);
             color: var(--color-bg-accent);
+            font-size: 1.2em;
+
         }
     }
 }
