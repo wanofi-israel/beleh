@@ -280,4 +280,32 @@
     flex-direction: row;
     gap: 10%;
     display: flex;
+
+
+  }
+.contactus-section{
+  display: flex;
+  width: 95%;
+  margin: auto;
+
 }
+  .contactus-section h1{
+    color: var(--color-text);
+    font-size: 5em;
+    font-family: FKGrosteskLight, sans-serif !important;;
+    width: 60%;
+    
+  }
+
+.contactus-section a{
+  color: var(--color-primary-blue-light);
+  font-size: 4em;
+  font-family: FKGrosteskLight, sans-serif !important;;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contactus-section .icon{
+  font-size: 1em;
+}
+
