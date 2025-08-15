@@ -9,9 +9,9 @@ function App() {
     gsap.registerPlugin(SplitText,ScrollTrigger)
   return (
     <div className='app'>
-    {/* <Navbar/>
-    <Hero/> */}
-    <div className='service-section'>
+    <Navbar/>
+    <Hero/>
+    <div className='service-section-cards'>
     <ServiceCard/>
     <ServiceCard/>
     <ServiceCard/>
