@@ -160,33 +160,36 @@
         background-size: cover;
 
 
-.servicecard-content{
-   flex-flow: column;
-    justify-content: flex-end;
-    align-items: stretch;
-    width: 100%;
-    height: 100%;
-    display: flex;
-   
-    top: 0;
-    left: 0;
-    padding: 50px;
-    color: white;
-    font-family: FKGrosteskLight, sans-serif !important;
-    font-size: 2rem;
+        .servicecard-content{
+           flex-flow: column;
+            justify-content: flex-end;
+            align-items: stretch;
+            width: 100%;
+            height: 100%;
+            display: flex;
+           
+            top: 0;
+            left: 0;
+            padding: 50px;
+            color: white;
+            font-family: FKGrosteskLight, sans-serif !important;
+            font-size: 2rem;
+        }
+        
+        &:nth-child(1){
+            margin-top: 4rem;
+        }
+        &:nth-child(2){
+            margin-top: 12rem;
+        }
+        &:nth-child(3){
+            margin-top: 20rem;
+        }
+        &:nth-child(4){
+            margin-top: 28rem;
+        }
+    }
 }
-
-.service-section-cards{
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    flex-flow: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    display: flex
-;
-}
-
 
 
 .footer {
@@ -293,41 +296,6 @@
     flex-direction: row;
     gap: 10%;
     display: flex;
-<<<<<<< HEAD
-}
-        .servicecard-content{
-           flex-flow: column;
-            justify-content: flex-end;
-            align-items: stretch;
-            width: 100%;
-            height: 100%;
-            display: flex;
-           
-            top: 0;
-            left: 0;
-            padding: 50px;
-            color: white;
-            font-family: FKGrosteskLight, sans-serif !important;
-            font-size: 2rem;
-        }
-        
-        &:nth-child(1){
-            margin-top: 4rem;
-        }
-        &:nth-child(2){
-            margin-top: 12rem;
-        }
-        &:nth-child(3){
-            margin-top: 20rem;
-        }
-        &:nth-child(4){
-            margin-top: 28rem;
-        }
-    }
-}
-
-
-=======
 
 
   }
@@ -356,5 +324,3 @@
 .contactus-section .icon{
   font-size: 1em;
 }
-
->>>>>>> b3798c4bba69ccb4cd789af2535cdd0dfb5276af

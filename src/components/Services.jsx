@@ -10,8 +10,7 @@ function Services() {
         const tl=gsap.timeline({
             scrollTrigger:{
                 trigger:"#services",
-                start:'top center',
-                 markers: true, 
+                start:'top center'
             }
         })
        tl.from(splitService.lines,{
