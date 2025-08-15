@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ServiceCard from './components/ServiceCard'
 import Footer from './components/Footer'
+import ContactUs from './components/ContactUs'
 import { SplitText,ScrollTrigger } from 'gsap/all'
 import gsap from 'gsap'
 import Services from './components/Services'
@@ -22,7 +23,7 @@ function App() {
     <ServiceCard/>
     <ServiceCard/>
     </div>
-
+<ContactUs/>
     <Footer/>
 >>>>>>> 0c49fde873048a1ae501627db6ea5bb299efc437
     </div>
