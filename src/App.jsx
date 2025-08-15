@@ -13,10 +13,6 @@ function App() {
     <div className='app'>
     <Navbar/>
     <Hero/>
-<<<<<<< HEAD
-    <Services/>
-    
-=======
     <div className='service-section-cards'>
     <ServiceCard/>
     <ServiceCard/>
@@ -25,7 +21,6 @@ function App() {
     </div>
 <ContactUs/>
     <Footer/>
->>>>>>> 0c49fde873048a1ae501627db6ea5bb299efc437
     </div>
   )
 }
