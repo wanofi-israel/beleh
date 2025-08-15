@@ -14,7 +14,7 @@ function App() {
     <Navbar/>
     <Hero/>
     <Services/>
-    <ContactUs/>
+<ContactUs/>
     <Footer/>
     </div>
   )
