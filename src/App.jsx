@@ -4,18 +4,15 @@ import Hero from './components/Hero'
 import ServiceCard from './components/ServiceCard'
 import { SplitText,ScrollTrigger } from 'gsap/all'
 import gsap from 'gsap'
+import Services from './components/Services'
 function App() {
-    gsap.registerPlugin(SplitText,ScrollTrigger)
+    gsap.registerPlugin(SplitText, ScrollTrigger)
   return (
     <div className='app'>
     <Navbar/>
     <Hero/>
-    <div className='service-section-cards'>
-    <ServiceCard/>
-    <ServiceCard/>
-    <ServiceCard/>
-    <ServiceCard/>
-    </div>
+    <Services/>
+    
     </div>
   )
 }
