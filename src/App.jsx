@@ -7,6 +7,7 @@ import ContactUs from './components/ContactUs'
 import { SplitText,ScrollTrigger } from 'gsap/all'
 import gsap from 'gsap'
 import Services from './components/Services'
+import Values from './components/Values'
 function App() {
     gsap.registerPlugin(SplitText, ScrollTrigger)
   return (
@@ -14,6 +15,7 @@ function App() {
     <Navbar/>
     <Hero/>
     <Services/>
+    <Values/>
 <ContactUs/>
     <Footer/>
     </div>
