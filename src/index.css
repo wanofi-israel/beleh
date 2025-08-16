@@ -26,7 +26,7 @@
     /* Utility shades (optional; based on these colors) */
     --color-primary-blue-light: #3370ff;
     /* adjust as needed */
-    --color-primary-blue-darker: #100b38;
+    --color-primary-blue-darker: #0a2448;
     --color-primary-blue-dark: #080618;
 
     /* Example for text and background */
@@ -47,14 +47,17 @@
     min-height: 100dvh;
     background-color: var(--color-primary-blue-dark);
     overflow-x: clip;
+    
 }
-
+* ::-webkit-scrollbar{
+  display: none;
+}
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2.5rem;
-    height: 15vh;
+    padding: 1rem 2.5rem;
+    height:20vh;
     color: var(--color-text);
     font-family: FKGrosteskRegular, sans-serif;
 
@@ -91,7 +94,7 @@
             border: none;
             background-color: var(--color-primary-blue-darker);
             color: var(--color-bg-accent);
-            font-size: 1.2em;
+            font-size: 1rem;
 
         }
     }
@@ -101,7 +104,7 @@
     min-height: 85vh;
     width: 100%;
     color: var(--color-text);
-    padding: 2.5rem;
+    padding: 1rem 2.5rem;
 
     >.content {
         height: 100%;
@@ -112,7 +115,7 @@
         justify-content: space-between;
 
         >.slogan {
-                font-size: clamp(2.5rem, 5vw, 3.6rem);
+                font-size: clamp(1.5rem, 5vw, 3.6rem);
 
             font-family: FKGrosteskLight, sans-serif !important;
             line-height: .9;
@@ -142,13 +145,14 @@
 .services{
     display: flex;
     flex-direction: column;
-    padding: 2.5rem;
+    padding: 1rem 2.5rem;
     .fade-in_service{
         text-align: right;
-        font-size: clamp(1.8rem, 6.9vw, 5rem);
-        padding: 1rem;
+        font-size: clamp(2.5rem, 6.9vw, 5rem);
+        padding: 1rem 3rem;
         font-family: FKGrosteskThin, sans-serif !important;
         color: var(--color-text);
+        text-wrap:nowrap !important;
     }
     
     .service-section-cards{
@@ -333,7 +337,7 @@
     }
 }
   .contactus-section h1{
-    text-wrap: nowrap;
+    text-wrap:  !important;
       width: fit-content;
     color: var(--color-text);
     font-size: clamp(2.5rem, 5vw, 4.5rem);
@@ -342,7 +346,7 @@
   }
 
 .contactus-section a{
-    text-wrap: nowrap;
+    text-wrap:  !important;
       width: fit-content;
       color: var(--color-bg-accent);
       font-size: clamp(2.5rem, 5vw, 4.5rem);

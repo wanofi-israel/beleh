@@ -13,10 +13,10 @@ function Navbar() {
       </div>
       <div className="navbar-right">
         <ul>
+            <li>Offerings</li>
             <li>Portfolio</li>
-            <li>Portfolio</li>
-            <li>Portfolio</li>
-            <li>Portfolio</li>
+            <li>About</li>
+            <li>Insights</li>
         </ul>
         <button className="cta">
             Contact
