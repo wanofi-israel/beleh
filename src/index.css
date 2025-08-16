@@ -212,12 +212,13 @@
 
 /* ---------------- VALUES ---------------- */
 .values {
-  min-height: 100dvh;
+  /* min-height: 100dvh; */
   height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: var(--padding);
+  /* margin-bottom: 50dvh; */
 }
 
 .values > h3 {
@@ -226,7 +227,7 @@
   font-size: clamp(2.5rem, 6.9vw, 5rem);
 }
 
-.values > .container {
+.container {
   min-height: 100vh;
   flex: 1;
   display: flex;
@@ -239,29 +240,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 50%;
+  width: 50%;
+  min-height: 100%;
 }
 
 .values-left .sticky-image {
   width: 80%;
   height: 80%;
-  background-color: red;
+  border: 1px solid white;
+  box-shadow: 0 0 400px -5px green;
 }
 
 .values-right {
   flex: 1;
   /* background-color: blue; */
-  max-width: 50%;
+  width: 50%;
   color: var(--color-text);
   overflow: hidden;
+  min-height: 100%;
 }
 
 .values-right > .content {
-  background-color: green;
   height: 200%;
   display: flex;
   flex-direction: column;
-  transform: translateY(-50%);
+  position: relative;
 }
 
 .values-right > .content > div {

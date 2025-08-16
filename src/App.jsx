@@ -8,6 +8,7 @@ import { SplitText,ScrollTrigger } from 'gsap/all'
 import gsap from 'gsap'
 import Services from './components/Services'
 import Values from './components/Values'
+import ValuesDetail from './components/ValuesDetail'
 function App() {
     gsap.registerPlugin(SplitText, ScrollTrigger)
   return (
@@ -16,6 +17,7 @@ function App() {
     <Hero/>
     <Services/>
     <Values/>
+    <ValuesDetail/>
 <ContactUs/>
     <Footer/>
     </div>
