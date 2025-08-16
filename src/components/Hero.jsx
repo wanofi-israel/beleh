@@ -47,9 +47,13 @@ function Hero() {
         </h1>
       </div>
       <div className="fade-in brief">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis et, unde eveniet facere vitae ullam deserunt, iure praesentium recusandae facilis optio.</p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Blanditiis et, unde eveniet facere vitae ullam deserunt, 
+            iure praesentium recusandae facilis optio.
+        </p>
         <div className="cta-discover">
-            Discover More <ArrowDownwardIcon sx={{fontSize:"36px"}}/>
+            Discover more <ArrowDownwardIcon sx={{fontSize:"36px"}}/>
         </div>
       </div>
         </div>

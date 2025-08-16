@@ -6,7 +6,7 @@ import { SplitText } from 'gsap/all'
 
 function Services() {
     useGSAP(()=>{
-        const splitService=new SplitText('.fade-in_service',{type:'words, lines'})
+        const splitService=new SplitText('.fade-in_service',{type:'lines'})
         const tl=gsap.timeline({
             scrollTrigger:{
                 trigger:"#services",
@@ -16,8 +16,8 @@ function Services() {
        tl.from(splitService.lines,{
             opacity:0,
             yPercent:100,
-            duration:1,
-            stagger:.06,
+            duration:2,
+            stagger:.2,
             ease:'expo.out'
         })
     },[])
