@@ -9,7 +9,7 @@ function ValuesDetail() {
                 scrollTrigger:{
                     trigger:".container",
                     start:'top top',
-                    end:'bottom top',
+                    end:'bottom -80%',
                     pin:true,
                     scrub:true
                 }
