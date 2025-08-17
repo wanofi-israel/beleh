@@ -9,7 +9,7 @@ function ValuesDetail() {
                 scrollTrigger:{
                     trigger:".container",
                     start:'top top',
-                    end:'bottom -80%',
+                    end:'bottom -20%',
                     pin:true,
                     scrub:true
                 }
@@ -17,7 +17,8 @@ function ValuesDetail() {
             contentTl.to('.content',{
                 yPercent:-50
             }).to('.sticky-image',{
-                boxShadow:'0 0 400px -5px red'
+                boxShadow:'0 0 400px -5px red',
+                duration:.2
             })
 
     },[])

@@ -177,7 +177,7 @@
 .servicecard {
   flex: 1;
   max-width: 380px;
-  height: 400px;
+  height: 450px;
   border: 1.5px solid #1fa5fd;
   background-image: url(./assets/images/service.jpg);
   background-repeat: no-repeat;
@@ -201,13 +201,13 @@
 }
 
 .servicecard:nth-child(2) {
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 .servicecard:nth-child(3) {
-  margin-top: 12rem;
+  margin-top: 14rem;
 }
 .servicecard:nth-child(4) {
-  margin-top: 18rem;
+  margin-top: 20rem;
 }
 
 /* ---------------- VALUES ---------------- */
