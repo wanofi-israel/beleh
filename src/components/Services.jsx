@@ -20,6 +20,18 @@ function Services() {
             stagger:.2,
             ease:'expo.out'
         })
+        // .to('.servicecard',{
+        //   scrollTrigger:{
+        //     trigger:'.service-section-cards',
+        //     stagger:.04,
+        //     scrub:true,
+        //     start:'top top',
+        //     end:'bottom top',
+        //     markers:true
+        //   },
+        //   marginTop:"0",
+        //   ease:'expo'
+        // })
     },[])
 
   return (
