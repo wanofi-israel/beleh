@@ -38,7 +38,7 @@
   --color-text: #f2f2f2;
   --color-text-blue: #002fff;
   --color-bg-accent: #1fa5fd;
-  --color-bg-bluish: #cfebfc;
+  --color-bg-bluish: #ecf5ff;
   --color-border: #002fff5b;
   /* padding*/
   --padding: 2rem 2.5rem;
@@ -243,7 +243,8 @@
   justify-content: center;
   width: 50%;
   min-height: 100%;
-  overflow: hidden;
+  overflow-y: clip;
+
   position: relative;
 }
 
@@ -256,8 +257,8 @@
 }
 
 .values-left .back-shadow{
-  width: 70%;
-  height:80%;
+  width: 40%;
+  height:60%;
   background: radial-gradient(circle, rgba(255, 123, 0, 0.603) 0%, rgba(255,0,0,0) 80%);
   filter:blur(50px);
   border-radius: 12%;
@@ -268,6 +269,7 @@
   z-index: -1;
   transform: translate(-50%,-50%);
 }
+
 .values-right {
   flex: 1;
   /* background-color: blue; */
@@ -306,7 +308,29 @@
   font-family: FKGrosteskRegular, sans-serif !important;
   width: 70%;
   min-width: 300px;
-  font-size: clamp(1rem, 2.7vw, 1.6rem);
+  font-size: clamp(1rem, 2.7vw, 1.2rem);
+}
+.values-right > .content > div .cta-container {
+  width: 70%;
+  min-width: 300px;
+}
+.values-right > .content > div >.cta-container> .cta-learn-more {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:.5rem;
+  padding:6px 12px;
+  font-family: FKGrosteskRegular, sans-serif !important;
+  border: none;
+}
+.values-right > .content > div >.cta-container> .cta-learn-more >.icon {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-primary-blue-dark);
+  padding: 4px;
 }
 
 /* ---------------- FOOTER ---------------- */
@@ -468,9 +492,10 @@
 .portfolio {
   width: 100%;
   height: 100dvh;
-  background:linear-gradient(135deg, var(--color-text) 10%,var(--color-bg-bluish)) ;
+  background:linear-gradient(135deg, var(--color-text) 20%,var(--color-bg-bluish)) ;
   display: flex;
   flex-direction: column;
+  padding: var(--padding);
 
 }
 
@@ -480,11 +505,21 @@
   flex-wrap: wrap;
 
 }
+.portfolio .portfolio-top .header{
+  border: 1px solid var(--color-border);
+  width: fit-content;
+  font-family:FKGrosteskLight, sans-serif !important;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  padding:1rem 4rem 12rem 1rem;
+  color: var(--color-text-blue);
 
+
+}
 .portfolio-top .portfolio-top_left {
   flex: 1;
   min-width: 300px;
   border: 1px solid var(--color-border);
+  padding: 2rem;
 }
 
 .portfolio-top .portfolio-top_right {
@@ -503,6 +538,8 @@
   justify-content: center;
   font-family: FKGrosteskMidium, sans-serif !important;
   color: var(--color-text-blue);
+    transition: all 1s ease;
+
   h2{
     transition: all 0.3s ease;
   }
@@ -514,6 +551,7 @@
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 2fr 1fr;
   .projects:nth-child(1){
+    background-color:#e5f0fd;
     h2{
       transform: scale(1.8);
     }
@@ -526,6 +564,7 @@
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 2fr 1fr;
   .projects:nth-child(2){
+    background-color:#e5f0fd;
     h2{
       transform: scale(1.8);
     }
@@ -538,6 +577,7 @@
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 2fr;
   .projects:nth-child(3){
+    background-color:#e5f0fd;
     h2{
       transform: scale(1.8);
     }
@@ -551,6 +591,7 @@
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 2fr;
   .projects:nth-child(4){
+    background-color:#e5f0fd;
     h2{
       transform: scale(1.8);
     }
