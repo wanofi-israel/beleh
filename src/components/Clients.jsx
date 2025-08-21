@@ -23,9 +23,6 @@ function Clients() {
             scrollTl.pause()
         }} onMouseLeave={()=>{
             scrollTl.resume()
-        }} onMouseDown={(e)=>{
-            e.preventDefault()
-            
         }}>
             <div className="crousal-items">
                 <div className="crousal-item">Awash Bank</div>

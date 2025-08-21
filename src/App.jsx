@@ -11,8 +11,36 @@ import Values from './components/Values'
 import ValuesDetail from './components/ValuesDetail'
 import Portfolio from './components/Portfolio'
 import Clients from './components/Clients'
+import { useGSAP } from '@gsap/react'
 function App() {
     gsap.registerPlugin(SplitText, ScrollTrigger)
+
+    useGSAP(()=>{
+      ScrollTrigger.create({
+  trigger: "body", // Or any specific element you want to monitor
+  start: "top top",
+  onUpdate: self => {
+    if (self.direction === 1) {
+      console.log("Scrolling down");
+
+      gsap.to('.navbar',{
+        top:-100,
+        opacity:0,
+        ease:'power1.inOut'
+      })
+      // Add a class, trigger an animation, etc.
+    } else {
+      console.log("Scrolling up");
+      // Remove a class, reverse an animation, etc.
+      gsap.to('.navbar',{
+        top:0,
+        opacity:1,
+        ease:'power1.inOut'
+      })
+    }
+  }
+});
+    },[])
   return (
     <div className='app'>
     <Navbar/>
