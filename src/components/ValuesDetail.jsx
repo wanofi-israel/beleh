@@ -5,8 +5,10 @@ import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 function ValuesDetail() {
 
   const box = useRef()
+  const isMobile=useMediaQuery({maxWidth:665})
   useGSAP(() => {
-  const contentTl = gsap.timeline({
+  if(!isMobile){
+    const contentTl = gsap.timeline({
     scrollTrigger: {
       trigger: ".container",
       start: "top top",
@@ -17,6 +19,8 @@ function ValuesDetail() {
     }
   });
 
+  console.log('working');
+  
   contentTl
     .to(".content", {
       yPercent: -50
@@ -32,8 +36,10 @@ function ValuesDetail() {
       border: "1px solid #fd982a",
       ease: "none"
     }, 0);
+}
 }, []);
 
+console.log(isMobile);
 
   return (
     <div className="container" id="container">
@@ -95,5 +101,6 @@ function ValuesDetail() {
     </div>
   )
 }
+import { useMediaQuery } from 'react-responsive';
 
 export default ValuesDetail

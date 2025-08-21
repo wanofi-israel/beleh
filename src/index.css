@@ -664,3 +664,38 @@
 .contact-us-form{
   background-color: white;
 }
+
+@media (max-width:665px) {
+  .container{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .values-left,.values-right{
+    flex: 1;
+    width: 100%;
+  }
+  .values-left .sticky-image{
+    height: 250px;
+  }
+  .values-right{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    min-width: none;
+  }
+  .values-right .content {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .values-right .value-top{
+    height: fit-content;
+  }
+  .service-section-cards{
+    gap: 2rem;
+  }
+  .servicecard{
+    margin: 0 !important;
+  }
+}
