@@ -10,6 +10,7 @@ import Services from './components/Services'
 import Values from './components/Values'
 import ValuesDetail from './components/ValuesDetail'
 import Portfolio from './components/Portfolio'
+import Clients from './components/Clients'
 function App() {
     gsap.registerPlugin(SplitText, ScrollTrigger)
   return (
@@ -19,6 +20,7 @@ function App() {
     <Services/>
     <Values/>
     <ValuesDetail/>
+    <Clients/>
     <Portfolio/>
 <ContactUs/>
     <Footer/>

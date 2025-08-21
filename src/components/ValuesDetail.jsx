@@ -6,31 +6,34 @@ function ValuesDetail() {
 
   const box = useRef()
   useGSAP(() => {
-    const contentTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".container",
-        start: 'top top',
-        end: 'bottom 10%',
-        pin: true,
-        scrub: true
-      }
-    })
-    contentTl.to('.content', {
+  const contentTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".container",
+      start: "top top",
+      end: "bottom -100%",
+      pin: true,
+      scrub: true,
+      invalidateOnRefresh: true,
+    }
+  });
+
+  contentTl
+    .to(".content", {
       yPercent: -50
-    })
-    contentTl.fromTo('.back-shadow',{
+    }, 0)
+    .fromTo(".back-shadow", {
       background: "radial-gradient(circle, rgba(51,112,255,1) 0%, rgba(51,112,255,0) 80%)"
-    } ,{
+    }, {
       background: "radial-gradient(circle, #fd982a 0%, rgba(255,0,0,0) 80%)"
-    })
-    contentTl.fromTo('.sticky-image',{
+    }, 0)
+    .fromTo(".sticky-image", {
       border: "1px solid rgba(51,112,255,1)"
     }, {
       border: "1px solid #fd982a",
-      ease:'none'
-    })
+      ease: "none"
+    }, 0);
+}, []);
 
-  }, [])
 
   return (
     <div className="container" id="container">
