@@ -624,18 +624,22 @@
 .clients .outer-crousal{
   flex: 1;
   display: flex;
-  max-height: 300px;
+  /* max-height: 300px; */
+  height: 300px;
   overflow: hidden;
   width: 100%;
 }
 .clients .outer-crousal .inner-crousal{
   display: flex;
   width:fit-content;
+  min-height: 100%;
+  height:300px;
 }
 
 .clients .outer-crousal .inner-crousal .crousal-items{
   width:100%;
   max-width:100%;
+  min-height: 100%;
   height: 100%;
   background-color: black;
   display: flex;
@@ -653,6 +657,8 @@
   font-size:2.1rem;
   font-family: FKGrosteskMidium, sans-serif !important;
   font-weight: 800;
+  min-height: 100%;
+  height: 100%;
 }
 
 .crousal-items .crousal-item:hover{
@@ -666,6 +672,9 @@
 }
 
 @media (max-width:665px) {
+  *{
+    --padding:1rem;
+  }
   .container{
     flex-direction: column;
     gap: 2rem;
@@ -691,6 +700,12 @@
   }
   .values-right .value-top{
     height: fit-content;
+  }
+  .services{
+    padding: 1rem;
+  }
+  .fade-in_service{
+    padding: 0;
   }
   .service-section-cards{
     gap: 2rem;
