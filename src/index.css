@@ -217,6 +217,7 @@
 .servicecard {
   flex: 1;
   max-width: 380px;
+  min-width: 160px;
   height: 450px;
   border: 1.5px solid #1fa5fd;
   background-image: url(./assets/images/service.jpg);
@@ -237,7 +238,7 @@
   padding: 50px;
   color: white;
   font-family: FKGrosteskLight, sans-serif !important;
-  font-size: 2rem;
+  font-size: 1.4em;
 }
 
 .servicecard:nth-child(2) {
@@ -861,13 +862,19 @@
   }
 
   .service-section-cards {
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .servicecard {
-    margin: 0 !important;
+    /* margin: 0 !important; */
   }
+ .servicecard:nth-child(3) {
+  margin-top: -8rem;
+}
 
+.servicecard:nth-child(4) {
+  margin-top: 0rem;
+}
   .contactus-section {
     width: 100%;
     padding: var(--padding);
