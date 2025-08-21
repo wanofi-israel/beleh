@@ -1,44 +1,82 @@
-import React from 'react'
+import React, { useState } from "react";
 
-function ContactForm() {
-  const NameForm = () => {
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        alert(`Hello ${firstName} ${lastName}!`);
-    };
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-    return (
-    
-        <div className="contact-us-form">
-            <h1>1 → Let’s get to know you, what’s your name?*</h1>
-            <form className="name-form">
-                <div className="input-group">
-                    <label htmlFor="first-name">First name *</label>
-                    <input 
-                        type="text"
-                        id="first-name"
-                        
-                       
-                        required
-                    />
-                </div>
-                <div className="input-group">
-                    <label htmlFor="last-name">Last name *</label>
-                    <input 
-                        type="text"
-                        id="last-name"
-                        required
-                    />
-                </div>
-                <button type="submit" className="submit-button">OK</button>
-            </form>
-        </div>
-        
-    );
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+
+    setFormData({ name: "", email: "", phone: "", message: "" });
+  };
+
+  return (
+    <div className="contactus-form-section">
+    <div className="contact-form-container">
+      <h2>Let's get in touch!</h2>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Name *
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            placeholder="Abebe Kebede"
+          />
+        </label>
+
+        <label>
+          Email *
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            placeholder="abebe@example.com"
+          />
+        </label>
+
+        <label>
+          Phone Number *
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            placeholder="+251 9XXXXXXXX"
+          />
+        </label>
+
+        <label>
+          Message *
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            placeholder="Your message..."
+          />
+        </label>
+
+        <button type="submit">OK</button>
+      </form>
+    </div>
+    </div>
+  );
 };
-}
 
-export default ContactForm
+export default ContactForm;
