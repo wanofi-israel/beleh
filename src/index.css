@@ -625,26 +625,24 @@
   flex: 1;
   display: flex;
   max-height: 300px;
-  overflow: scroll;
+  overflow: hidden;
+  width: 100%;
 }
 .clients .outer-crousal .inner-crousal{
-  flex: 1;
   display: flex;
-  width: fit-content;
-  min-height: fit-content;
+  width:fit-content;
 }
 
 .clients .outer-crousal .inner-crousal .crousal-items{
-  width: 50%;
-  min-width:50%;
+  width:100%;
+  max-width:100%;
   height: 100%;
   background-color: black;
   display: flex;
 }
 .crousal-items .crousal-item{
   flex: 1;
-  min-width: 300px;
-  max-width: 400px;
+  min-width: 250px;
   border: 1px solid rgba(255, 255, 255, 0.212);
   display: flex;
   align-items: center;
@@ -652,7 +650,7 @@
   color: var(--color-text);
   filter:brightness(.7);
   color: var(--color-text);
-  font-size:2.3rem;
+  font-size:2.1rem;
   font-family: FKGrosteskMidium, sans-serif !important;
   font-weight: 800;
 }
