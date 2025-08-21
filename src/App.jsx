@@ -12,6 +12,7 @@ import ValuesDetail from './components/ValuesDetail'
 import Portfolio from './components/Portfolio'
 import Clients from './components/Clients'
 import { useGSAP } from '@gsap/react'
+import ContactForm from './components/ContactForm'
 function App() {
     gsap.registerPlugin(SplitText, ScrollTrigger)
 
@@ -51,6 +52,7 @@ function App() {
     <Clients/>
     <Portfolio/>
 <ContactUs/>
+<ContactForm/>
     <Footer/>
     </div>
   )
