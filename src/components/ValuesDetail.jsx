@@ -18,8 +18,6 @@ function ValuesDetail() {
       invalidateOnRefresh: true,
     }
   });
-
-  console.log('working');
   
   contentTl
     .to(".content", {
@@ -38,9 +36,6 @@ function ValuesDetail() {
     }, 0);
 }
 }, []);
-
-console.log(isMobile);
-
   return (
     <div className="container" id="container">
       <div ref={box} className="values-left">
