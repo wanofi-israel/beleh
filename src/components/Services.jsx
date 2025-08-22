@@ -1,5 +1,4 @@
 import React from 'react'
-import ServiceCard from './ServiceCard'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { SplitText } from 'gsap/all'
@@ -20,18 +19,6 @@ function Services() {
             stagger:.2,
             ease:'expo.out'
         })
-        // .to('.servicecard',{
-        //   scrollTrigger:{
-        //     trigger:'.service-section-cards',
-        //     stagger:.04,
-        //     scrub:true,
-        //     start:'top top',
-        //     end:'bottom top',
-        //     markers:true
-        //   },
-        //   marginTop:"0",
-        //   ease:'expo'
-        // })
     },[])
 
   return (
@@ -39,12 +26,6 @@ function Services() {
       <h3 className='fade-in_service'>
         We envision a <br /> transformative <br /> decade ahead
       </h3>
-    <div className='service-section-cards'>
-    <ServiceCard/>
-    <ServiceCard/>
-    <ServiceCard/>
-    <ServiceCard/>
-    </div>
     </div>
   )
 }

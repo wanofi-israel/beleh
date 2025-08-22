@@ -13,6 +13,7 @@ import Portfolio from "./components/Portfolio";
 import Clients from "./components/Clients";
 import { useGSAP } from "@gsap/react";
 import ContactForm from "./components/ContactForm";
+import ServicesCards from "./components/ServicesCards";
 function App() {
   gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -42,6 +43,7 @@ function App() {
       <Navbar />
       <Hero />
       <Services />
+      <ServicesCards/>
       <Values />
       <ValuesDetail />
       <Clients />

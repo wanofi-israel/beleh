@@ -206,24 +206,23 @@
 }
 
 .service-section-cards {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  flex-flow: wrap;
-  justify-content: center;
-  align-items: flex-start;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(min(173px,100%),1fr) minmax(min(173px,100%),1fr));
+  grid-gap: 1rem;
+  padding: var(--padding);
+  height: 110vh;
+  place-items: center;
 }
 
 .servicecard {
-  flex: 1;
-  max-width: 380px;
-  min-width: 160px;
-  height: 450px;
+  aspect-ratio: 3/4;
   border: 1.5px solid #1fa5fd;
-  background-image: url(./assets/images/service.jpg);
+  background:linear-gradient(rgba(0, 0, 0, 0.185)),url(./assets/images/service.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
 }
 
 .servicecard .servicecard-content {
@@ -235,22 +234,24 @@
   display: flex;
   top: 0;
   left: 0;
-  padding: 50px;
+  padding: 1.8rem;
   color: white;
   font-family: FKGrosteskLight, sans-serif !important;
-  font-size: 1.4em;
+    font-size: clamp(1rem, 2vw, 1.8rem);
 }
 
 .servicecard:nth-child(2) {
-  margin-top: 8rem;
+  transform: translateY(6rem);
 }
 
 .servicecard:nth-child(3) {
-  margin-top: 14rem;
+    transform: translateY(12rem);
+
 }
 
 .servicecard:nth-child(4) {
-  margin-top: 20rem;
+    transform: translateY(18rem);
+
 }
 
 /* ---------------- VALUES ---------------- */
@@ -811,11 +812,23 @@
   background-color: #63b3ed;
 }
 
+@media (max-width:819.5px){
+  .service-section-cards{
+    height: 120vh;
+  }
+  .servicecard:nth-child(3) {
+    transform: translateY(-8rem) !important;
+  }
+  
+  .servicecard:nth-child(4) {
+    transform: translateY(-2rem) !important;
+  }
+}
 @media (max-width:665px) {
   * {
     --padding: 1rem;
   }
-
+  
   .values{
     margin-block: 2rem;
   }
@@ -860,21 +873,10 @@
   .fade-in_service {
     padding: 0;
   }
-
-  .service-section-cards {
-    gap: 1rem;
-  }
-
-  .servicecard {
-    /* margin: 0 !important; */
-  }
- .servicecard:nth-child(3) {
-  margin-top: -8rem;
-}
-
-.servicecard:nth-child(4) {
-  margin-top: 0rem;
-}
+  
+  
+  
+  
   .contactus-section {
     width: 100%;
     padding: var(--padding);
@@ -887,12 +889,12 @@
   .navbar-left {
     display: none;
   }
-
+  
   .navbar-center {
     /* background-color: yellow; */
     justify-content: flex-start;
   }
-
+  
   .navbar-right {
     position: fixed;
     display: none;
@@ -931,11 +933,25 @@
   }
   .portfolio-top .portfolio-right {
     flex: 1;
-    border: 2px solid red !important;
+  }
+  .portfolio-top .portfolio-right >*{
+    min-width:150px !important;
   }
   .portfolio-top .header{
     padding: 1rem 4rem 8rem 1rem !important;
   }
+}
+@media (max-width:700px){
+  .service-section-cards{
+    height: 100vh;
+  }
+ .servicecard:nth-child(3) {
+    transform: translateY(-11rem) !important;
+}
+
+.servicecard:nth-child(4) {
+    transform: translateY(-5rem) !important;
+}
 }
 .stop-scrolling{
   overflow: clip !important;
