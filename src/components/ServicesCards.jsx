@@ -12,7 +12,6 @@ function ServicesCards() {
             gsap.to('.servicecard',{
               scrollTrigger:{
                 trigger:'.service-section-cards',
-                markers:true,
                 start:'top top',
                 end:'bottom -20%',
                 scrub:true
