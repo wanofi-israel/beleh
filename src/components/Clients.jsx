@@ -7,9 +7,9 @@ function Clients() {
     let scrollTl=gsap.timeline({})
     useGSAP(()=>{
         scrollTl.to('.inner-crousal',{
-            xPercent:-50,
+            xPercent:-100,
             ease:'none',
-            duration:15,
+            duration:45,
             repeat:-1
         })
     },[])
@@ -32,7 +32,7 @@ function Clients() {
                 <div className="crousal-item">ELPA</div>
             </div>
             <div className="crousal-items">
-                <div className="crousal-item">Awash Bank</div>
+                <div className="crousal-item">2Awash Bank</div>
                 <div className="crousal-item">Tele Birr</div>
                 <div className="crousal-item">CBE</div>
                 <div className="crousal-item">RIDE</div>
