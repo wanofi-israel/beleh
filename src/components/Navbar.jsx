@@ -2,12 +2,13 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React, { useEffect, useRef, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
+import { Link, useLocation } from 'react-router-dom'
 
 function Navbar() {
 
   const [open,setOpen]=useState(false)
   const isMobile=useMediaQuery({maxWidth:770})
-
+  const location=useLocation()
   const toggleMenu=()=>{
     setOpen(prev=>!prev)
   }
@@ -29,6 +30,8 @@ function Navbar() {
       })
     }
   },[open])
+  console.log(location.pathname);
+  
   return (
     <div className='navbar'>
       <div className="navbar-left">
@@ -41,10 +44,10 @@ function Navbar() {
       </div>
       <div className={`navbar-right ${open?"open":""}`}>
         <ul>
-            <li onClick={toggleMenu} className='nav-links'>Offerings</li>
-            <li onClick={toggleMenu} className='nav-links'>Portfolio</li>
-            <li onClick={toggleMenu} className='nav-links'>About</li>
-            <li onClick={toggleMenu} className='nav-links'>Insights</li>
+            <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/offerings" aria-current={location.pathname.startsWith('/offerings') ? 'page' : undefined}>Offerings</Link> </li>
+            <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/portfolio/1" aria-current={location.pathname.startsWith('/portfolio') ? 'page' : undefined}>Portfolio</Link></li>
+            <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/about"  aria-current={location.pathname.startsWith('/about') ? 'page' : undefined}>About</Link> </li>
+            <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/insights"  aria-current={location.pathname.startsWith('/insights') ? 'page' : undefined}>Insights</Link></li>
         </ul>
         <button className="cta">
             Contact

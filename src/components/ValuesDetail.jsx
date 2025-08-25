@@ -2,10 +2,11 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import React, { useRef, useState } from 'react'
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
+import { useMediaQuery } from 'react-responsive';
 function ValuesDetail() {
 
   const box = useRef()
-  const isMobile=useMediaQuery({maxWidth:665})
+  const isMobile=useMediaQuery({maxWidth:664})
   useGSAP(() => {
   if(!isMobile){
     const contentTl = gsap.timeline({
@@ -96,6 +97,5 @@ function ValuesDetail() {
     </div>
   )
 }
-import { useMediaQuery } from 'react-responsive';
 
 export default ValuesDetail

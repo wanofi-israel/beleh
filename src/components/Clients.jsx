@@ -9,7 +9,7 @@ function Clients() {
         scrollTl.to('.inner-crousal',{
             xPercent:-100,
             ease:'none',
-            duration:45,
+            duration:15,
             repeat:-1
         })
     },[])
