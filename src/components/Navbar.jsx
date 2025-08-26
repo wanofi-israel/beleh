@@ -35,7 +35,7 @@ function Navbar() {
   return (
     <div className='navbar'>
       <div className="navbar-left">
-        <div className="logo">
+        <div className="nav-logo">
             Logo
         </div>
       </div>

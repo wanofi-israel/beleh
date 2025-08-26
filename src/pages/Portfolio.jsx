@@ -39,9 +39,29 @@ function Portfolio() {
           ease:'none'
         })
         if(isMobile){
+          gsap.to('.nav-logo,.navbar-center',{
+            color:"var(--color-text-blue)"
+          })
           gsap.to('.navbar',{
             color:"var(--color-text)"
           })
+
+          gsap.to('.navbar',{
+            scrollTrigger:{
+                trigger:'.portfolio-container',
+                start:'top top',
+                end:'bottom top',
+                scrub:true,
+                onLeaveBack:()=>{
+                gsap.to('.nav-logo,.navbar-center',{color:"var(--color-text-blue)"})
+                },
+                onEnter:()=>{
+                gsap.to('.nav-logo,.navbar-center',{color:"var(--color-text)"})
+                }
+            }
+        })
+
+
           }else{
           gsap.to('.navbar',{
             color:"var(--color-text-blue)"

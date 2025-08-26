@@ -522,13 +522,14 @@
 .contactus-section {
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 60dvh;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content:center;
   align-content: center;
   width: 80%;
   margin: auto;
   gap: 2rem;
+  padding: var(--padding);
 }
 
 .contactus-section div {
@@ -917,7 +918,7 @@
 
 .portfolio-page .portfolio-container {
   width: 100%;
-  height: 100dvh;
+  height: 88dvh;
   min-height: fit-content;
   background-color: var(--color-primary-blue);
   margin: auto;
@@ -926,9 +927,6 @@
   padding: var(--padding);
   flex-wrap: wrap;
   position: relative;
-}
-.portfolio-container .portfolio-left{
-
 }
 .portfolio-container .portfolio-left,.portfolio-container .portfolio-right{
   position: absolute;
@@ -953,14 +951,13 @@
   flex: 1;
   display: flex;
   width: 100%;
-  height: 100%;
+  /* height: 100% !important; */
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
   color: var(--color-text);
   min-width: 280px;
 }
-
 .portfolio-container .portfolio-container_right .company-name {
   font-family: FKGrosteskLight, sans-serif !important;
   font-size: clamp(2.5rem, 6.9vw, 5rem);
@@ -971,11 +968,15 @@
   font-family: FKGrosteskRegular, sans-serif !important;
   font-size: clamp(1.4rem, 6.9vw, 1.6rem);
   width: 80%;
+
 }
 
 .portfolio-container .portfolio-container_right .project-overview {
   font-family: FKGrosteskRegular, sans-serif !important;
+  font-size: clamp(1.1rem, 6.9vw, 1.2rem);
+
   width: 80%;
+
 }
 
 .portfolio-container .portfolio-container_left {
