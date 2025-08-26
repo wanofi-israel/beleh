@@ -7,7 +7,9 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { SplitText } from 'gsap/all';
 import portfolio from '../../constants/Portfolio';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 function Portfolio() {
+  const isMobile=useMediaQuery({maxWidth:664})
 
   const navigate=useNavigate()
   const {project}=useParams()
@@ -15,12 +17,9 @@ function Portfolio() {
        
       const splitCoOverview=new SplitText('.company-overview',{type:'lines'})
       const splitProOverview=new SplitText('.project-overview',{type:'lines'})
-        gsap.to('.navbar',{
-          color:"var(--color-text-blue)"
-        })
-
-        gsap.from('.project-image,.company-name',{
-          yPercent:100,
+      
+      gsap.from('.project-image,.company-name',{
+        yPercent:100,
           opacity:0,
           duration:.5,
           ease:'none'
@@ -39,7 +38,15 @@ function Portfolio() {
           duration:.5,
           ease:'none'
         })
-        gsap.to('.navbar',{
+        if(isMobile){
+          gsap.to('.navbar',{
+            color:"var(--color-text)"
+          })
+          }else{
+          gsap.to('.navbar',{
+            color:"var(--color-text-blue)"
+          })
+          gsap.to('.navbar',{
             scrollTrigger:{
                 trigger:'.portfolio-container',
                 start:'top top',
@@ -53,6 +60,8 @@ function Portfolio() {
                 }
             }
         })
+        }
+        
     },[project])
 
     
