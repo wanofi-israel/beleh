@@ -6,8 +6,11 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { SplitText } from 'gsap/all';
 import portfolio from '../../constants/Portfolio';
+import { useNavigate, useParams } from 'react-router-dom';
 function Portfolio() {
 
+  const navigate=useNavigate()
+  const {project}=useParams()
     useGSAP(()=>{
        
       const splitCoOverview=new SplitText('.company-overview',{type:'lines'})
@@ -50,34 +53,52 @@ function Portfolio() {
                 }
             }
         })
-    },[])
+    },[project])
 
     
-  let list=portfolio.map(el=>console.log(el)
-  )
+  let currentIndex=portfolio.findIndex(el=>el.company_name===project)
+
+  console.log(currentIndex);
+  
   return (
     <div className='portfolio-page'>
       <div className="portfolio-container">
-        <div className="portfolio-left"><KeyboardArrowLeftIcon sx={{fontSize:52,transform:"rotate(-45deg)"}}/></div>
-        <div className="portfolio-right"><KeyboardArrowRightIcon sx={{fontSize:52,transform:"rotate(-45deg)"}}/></div>
+        <div className="portfolio-left" 
+          onClick={()=>{
+            if(currentIndex-1<0){
+              navigate(`/portfolio/${portfolio[portfolio.length-1]?.company_name}`)
+            }else{
+              navigate(`/portfolio/${portfolio[currentIndex-1]?.company_name}`)
+            }
+          }}
+        ><KeyboardArrowLeftIcon sx={{fontSize:52,transform:"rotate(-45deg)"}}/></div>
+        <div className="portfolio-right" 
+          onClick={()=>{
+            if((currentIndex+1)%portfolio.length===0){
+              navigate(`/portfolio/${portfolio[0]?.company_name}`)
+            }else{
+              navigate(`/portfolio/${portfolio[currentIndex+1]?.company_name}`)
+            }
+          }}
+        ><KeyboardArrowRightIcon sx={{fontSize:52,transform:"rotate(-45deg)"}}/></div>
         <div className="portfolio-container_left">
             <div className="project-image">
             <img src={Project} alt="portfolio-image" width='100%' height='100%' />
             <div className="overlay">
-                <h2>ShapesXR</h2>
+                <h2>{portfolio[currentIndex]?.company_name}</h2>
             </div>
             </div>
             
         </div>
         <div className="portfolio-container_right">
             <h3 className="company-name">
-                ShapesXR
+                {portfolio[currentIndex]?.company_name}
             </h3>
             <p className="company-overview">
-                Design and Colaboration Platform for 3D and Immersive Content
+                {portfolio[currentIndex]?.company_overview}
             </p>
             <p className="project-overview">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto atque deserunt esse, quam incidunt nesciunt sint reiciendis illum aperiam libero alias dicta corrupti debitis adipisci molestiae dolor ipsum error enim id excepturi in eaque aliquam. A quo facere delectus id quibusdam in impedit molestias? Aut?
+                {portfolio[currentIndex]?.project_overview}
             </p>
         </div>
       </div>
