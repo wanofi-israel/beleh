@@ -5,6 +5,7 @@ import React from 'react'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { SplitText } from 'gsap/all';
+import portfolio from '../../constants/Portfolio';
 function Portfolio() {
 
     useGSAP(()=>{
@@ -51,6 +52,9 @@ function Portfolio() {
         })
     },[])
 
+    
+  let list=portfolio.map(el=>console.log(el)
+  )
   return (
     <div className='portfolio-page'>
       <div className="portfolio-container">

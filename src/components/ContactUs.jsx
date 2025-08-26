@@ -1,7 +1,24 @@
 import React, { useRef } from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+
 function ContactUs() {
   const linkRef=useRef(null)
+  const hoverTl=gsap.timeline({
+    duration:.5
+  })
+
+  useGSAP(()=>{
+    hoverTl.to('.after-after',{
+                xPercent:140
+              }).to('.after-after',{
+                scaleX:.3
+              }).to('.after-after',{
+                xPercent:200
+              })
+  },[])
+
   return (
     <div className='contactus-section'>
       <div>
@@ -11,33 +28,23 @@ function ContactUs() {
         <div
           className="link"
           onMouseEnter={() => {
-            if (linkRef.current) {
-              // Reset animation so it can play again
-              linkRef.current.style.animation = 'none';
-              // Force reflow to restart animation
-              void linkRef.current.offsetWidth;
-              linkRef.current.style.animation = 'borderAnimation .5s ease-in-out forwards';
-            }
+            hoverTl.restart()
           }}
           onMouseLeave={() => {
-            if (linkRef.current) {
-              // Reset animation so it can play again
-              linkRef.current.style.animation = 'none';
-              // Force reflow to restart animation
-              void linkRef.current.offsetWidth;
-              linkRef.current.style.animation = 'borderAnimation .5s ease-in-out reverse';
-            }
+            hoverTl.restart()
           }}
         >
-          <div className="after" ref={linkRef}></div>
           <a href="">
+          <div className="after" ref={linkRef}>
+            <div className="after-after"></div>
+          </div>
             <div className="icon">
               <div className="slide-icons">
-                <ArrowForwardIcon sx={{ fontSize: "1em", width: "100%", fill: "green" }} />
-                <ArrowForwardIcon sx={{ fontSize: "1em", width: "100%" }} />
+                <ArrowForwardIcon sx={{ fontSize: "4.3rem", width: "100%"}} />
+                <ArrowForwardIcon sx={{ fontSize: "4.3rem", width: "100%" }} />
               </div>
             </div>
-            Get intouch
+            Get in touch
           </a>
         </div>
       </div>
