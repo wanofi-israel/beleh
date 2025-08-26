@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 
 
@@ -13,10 +14,18 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit =async (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+    try {
+     const respnse=await axios.post('http://localhost:8000/api/contact/',formData)
 
+     if(respnse){
+      console.log(respnse); 
+     }
+    } catch (error) {
+      console.log(error);
+    }
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
