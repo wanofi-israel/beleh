@@ -16,8 +16,8 @@ const Footer = () => {
             <a href="mailto:hq@hartmanncapital.com">hq@hartmanncapital.com</a>
           </div>
           <div className="footer-contact">
-            <span className="footer-label">Press</span>
-            <a href="mailto:press@hartmanncapital.com">press@hartmanncapital.com</a>
+            <span className="footer-label">Phone No.</span>
+            <a href="tel:+251911607511">+251 911 607 511</a>
           </div>
           <div className="footer-contact">
             <span className="footer-label">Our Investors</span>
