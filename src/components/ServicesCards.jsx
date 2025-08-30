@@ -22,10 +22,18 @@ function ServicesCards() {
     },[])
   return (
     <div className='service-section-cards'>
-    <ServiceCard/>
-    <ServiceCard/>
-    <ServiceCard/>
-    <ServiceCard/>
+    <ServiceCard
+    text="Jingle & Music Production"
+    />
+    <ServiceCard
+    text="Promotional Vocal Recording"
+    />
+    <ServiceCard
+    text="Voice Artist Facilitation"
+    />
+    <ServiceCard
+    text="Music Production Supervision & More"
+    />
     </div>
   )
 }

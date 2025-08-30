@@ -1,63 +1,27 @@
 const portfolio=[
   {
-    company_name: "ShapesXR",
-    company_overview: "Design and Collaboration Platform for 3D and Immersive Content",
-    project_overview: "A powerful platform enabling designers and teams to collaborate in real-time on immersive 3D projects. ShapesXR reduces iteration time and simplifies prototyping for VR and AR applications.",
-    logo: "ShapesXR"
+    company_name: "Tele-Birr",
+    company_overview: "Telebirr Mobile Money Jingle.",
+    project_overview: "A vibrant, modern jingle highlighting the convenience  and innovation of Telebirr’s mobile money service. This catchy tune combines upbeat rhythms with a memorable melody to reinforce Telebirr’s message of easy, accessible  transactions.",
+    logo: "/images/TeleBirr.png"
   },
   {
-    company_name: "GreenTech-Solutions",
-    company_overview: "Sustainable Energy and Smart Grid Innovation",
-    project_overview: "Focused on renewable energy solutions, GreenTech develops smart grid software and IoT systems that help cities reduce carbon footprints and optimize electricity consumption.",
-    logo: "GreenTech Solutions"
+    company_name: "Tedla-Ambulance",
+    company_overview: "Tedla Ambulance Radio Spot.",
+    project_overview: "A concise and memorable jingle for Tedla Ambulance’s radio ad. In this piece, we used soothing harmonies and a reassuring melody to emphasize reliability and care, while a catchy hook ensures the emergency number stays on everyone’s mind.",
+    logo: "/images/tedla.png"
   },
   {
-    company_name: "MediAI-Health",
-    company_overview: "AI-Driven Healthcare Diagnostics",
-    project_overview: "An AI-powered medical platform that assists doctors with real-time diagnostics, image analysis, and predictive patient care, improving efficiency and reducing misdiagnosis risks.",
-    logo: "MediAI Health"
+    company_name: "CBE",
+    company_overview: "CBE Corporate Anthem.",
+    project_overview: "A full-length corporate anthem composed for the Commercial Bank of Ethiopia’s special campaign. This powerful piece features uplifting lyrics and a rich arrangement, reflecting CBE’s values, history, and vision. From the stirring intro to the grand finale, the anthem instills pride and unity among listeners.",
+    logo: "/images/CBE.png"
   },
   {
-    company_name: "AgroNext",
-    company_overview: "Smart Farming and Agricultural Automation",
-    project_overview: "Using drones, IoT sensors, and predictive analytics, AgroNext helps farmers optimize crop yield, monitor soil health, and reduce water and fertilizer waste.",
-    logo: "AgroNext"
-  },
-  {
-    company_name: "FinSphere",
-    company_overview: "Next-Gen Financial Technology and Digital Payments",
-    project_overview: "FinSphere provides secure blockchain-based payment processing, digital wallets, and cross-border transaction solutions for businesses and individuals.",
-    logo: "FinSphere"
-  },
-  {
-    company_name: "EduVerse",
-    company_overview: "Immersive Learning and Virtual Education",
-    project_overview: "A metaverse-style education platform where students and teachers interact in virtual classrooms, access gamified learning content, and collaborate on projects globally.",
-    logo: "EduVerse"
-  },
-  {
-    company_name: "UrbanFlow",
-    company_overview: "Smart City Traffic and Infrastructure Solutions",
-    project_overview: "UrbanFlow leverages AI traffic models and IoT-powered sensors to reduce congestion, improve public transport scheduling, and enhance pedestrian safety in urban areas.",
-    logo: "UrbanFlow"
-  },
-  {
-    company_name: "BioSyn-Labs",
-    company_overview: "Biotech and Pharmaceutical Research",
-    project_overview: "Specializing in synthetic biology and new drug discovery, BioSyn Labs is developing advanced treatments for rare diseases using AI-driven molecular simulations.",
-    logo: "BioSyn Labs"
-  },
-  {
-    company_name: "CloudForge",
-    company_overview: "Cloud Infrastructure and DevOps Automation",
-    project_overview: "CloudForge provides scalable cloud solutions, CI/CD pipelines, and developer-friendly automation tools to help companies deploy faster and more reliably.",
-    logo: "CloudForge"
-  },
-  {
-    company_name: "Visionary-AR",
-    company_overview: "Augmented Reality for Retail and Marketing",
-    project_overview: "Visionary AR transforms the shopping experience by enabling customers to visualize products in real-world spaces through AR apps, boosting engagement and sales.",
-    logo: "Visionary AR"
+    company_name: "Zekuria",
+    company_overview: "Zekuria Promo Song.",
+    project_overview: "A creative promotional song produced for Zekuria’s marketing campaign. Blending traditional Ethiopian musical elements with contemporary beats, we crafted an anthem that celebrates the brand’s heritage and forward-thinking spirit. The result is an engaging track that connected with a broad audience.",
+    logo: "/images/TeleBirr.png"
   }
 ];
 

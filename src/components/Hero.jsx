@@ -43,14 +43,13 @@ function Hero() {
         <div className="content">
             <div className="fade-in slogan">
         <h1>
-           The future <br /> belongs to those <br /> who invest in it
+           Your  <br />Brand Voice,<br /> Amplified.
         </h1>
       </div>
       <div className="fade-in brief">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Blanditiis et, unde eveniet facere vitae ullam deserunt, 
-            iure praesentium recusandae facilis optio.
+            We create immersive sound experiences that connect with your audience. 
+            Original jingles, music, and audio branding that resonate with your audience.
         </p>
         <div className="cta-discover">
             Discover more <ArrowDownwardIcon sx={{fontSize:"36px"}}/>

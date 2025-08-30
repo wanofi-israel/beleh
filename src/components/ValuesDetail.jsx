@@ -66,11 +66,12 @@ function ValuesDetail() {
       <div className="values-right">
         <div className="content" id="content">
           <div className="value-top">
-            <h3>Lorem ipsum <br /> dolor sit.</h3>
+            <h3>Creativity with Purpose</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-              nihil blanditiis eaque corporis fugit exercitationem debitis rerum
-              laborum deserunt molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, rerum.
+               Every note we compose has intention. We believe in 
+innovation that serves your story. By blending imaginative artistry with strategic 
+thinking, we ensure our jingles and sound productions amplify your message and inspire 
+your audience.
             </p>
             <div className="cta-container">
               <button className="cta-learn-more" style={{ color: "var(--color-accent-blue)", backgroundColor: "rgba(51,112,255,.2)" }}>
@@ -79,11 +80,13 @@ function ValuesDetail() {
             </div>
           </div>
           <div className="value-bottom">
-            <h3>Lorem ipsum <br /> dolor sit.</h3>
+            <h3>Reliability in Delivery</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-              nihil blanditiis eaque corporis fugit exercitationem debitis rerum
-              laborum deserunt molestias. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, reiciendis?
+               You can count on Bleh Jingles. From first concept to final cut, 
+we pride ourselves on professional, timely delivery. We meet deadlines, stick to budgets, 
+and maintain open communication, so you can trust that your project is in good hands 
+every step of the way.
+
             </p>
             <div className="cta-container">
               <button className="cta-learn-more" style={{ color: "#fd982a", backgroundColor: "#fd972a7c" }}>

@@ -1,5 +1,8 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import CBE from "../assets/images/CBE.png"
+import TeleBirr from "../assets/images/TeleBirr.png"
+import Tedla from "../assets/images/tedla.png"
 import React from 'react'
 
 function Clients() {
@@ -25,18 +28,18 @@ function Clients() {
             scrollTl.resume()
         }}>
             <div className="crousal-items">
-                <div className="crousal-item">Awash Bank</div>
-                <div className="crousal-item">Tele Birr</div>
-                <div className="crousal-item">CBE</div>
+                <div className="crousal-item"><img src={CBE} alt="CBE-Logo" width="60%"/></div>
+                <div className="crousal-item"><img src={TeleBirr} alt="CBE-Logo" width="60%"/></div>
+                <div className="crousal-item"><img src={Tedla} alt="CBE-Logo" width="60%"/></div>
+
                 <div className="crousal-item">RIDE</div>
-                <div className="crousal-item">ELPA</div>
             </div>
             <div className="crousal-items">
-                <div className="crousal-item">2Awash Bank</div>
-                <div className="crousal-item">Tele Birr</div>
-                <div className="crousal-item">CBE</div>
+                <div className="crousal-item"><img src={CBE} alt="CBE-Logo" width="60%" height="60%"/></div>
+                <div className="crousal-item"><img src={TeleBirr} alt="CBE-Logo" width="60%" height="60%"/></div>
+                <div className="crousal-item"><img src={Tedla} alt="CBE-Logo" width="60%"/></div>
+
                 <div className="crousal-item">RIDE</div>
-                <div className="crousal-item">ELPA</div>
             </div>
         </div>
       </div>
