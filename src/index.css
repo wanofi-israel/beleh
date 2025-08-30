@@ -61,7 +61,7 @@
   inset: 0;
   position: fixed;
   z-index: 0 !important;
-  filter: brightness(.5);
+  filter: brightness(1);
   min-width: 100vw;
   min-height: 100dvh;
   object-fit: cover;
@@ -806,12 +806,16 @@
   font-size: 2em;
   color: var(--color-text);
   border: 1px solid var(--color-border);
-  height: 300px;
+  height: fit-content;
+  aspect-ratio: 1;
   /* aspect-ratio: 1; */
   filter: brightness(.8);
   font-family: FKGrosteskMedium, sans-serif !important;
 
 
+}
+.inner-crousal .crousal-items .crousal-item img{
+  aspect-ratio: 1;
 }
 .crousal-items .crousal-item:hover {
   filter: brightness(1);
@@ -997,6 +1001,11 @@
   align-items: center;
   justify-content: center;
 
+}
+
+.portfolio-container .portfolio-container_left .project-image .overlay img{
+  position:relative;
+  width: 30%;
 }
 .portfolio-container .portfolio-container_left .project-image img {
   object-fit: cover;

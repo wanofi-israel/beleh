@@ -1,11 +1,11 @@
 import React from 'react'
 
-function ServiceCard() {
+function ServiceCard({text}) {
   return (
     <div className="servicecard">
 <div className='servicecard-content'>
    
-         <h3>Where most assets will be tokenized</h3>
+         <h3>{text}</h3>
 
 </div>
     </div>

@@ -1,7 +1,7 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Project from '../assets/images/service.jpg'
-import React from 'react'
+import React, { useEffect } from 'react'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { SplitText } from 'gsap/all';
@@ -13,6 +13,10 @@ function Portfolio() {
 
   const navigate=useNavigate()
   const {project}=useParams()
+
+  useEffect(()=>{
+    window.scroll(0,0)
+  },[project])
     useGSAP(()=>{
        
       const splitCoOverview=new SplitText('.company-overview',{type:'lines'})
@@ -114,7 +118,7 @@ function Portfolio() {
             <div className="project-image">
             <img src={Project} alt="portfolio-image" width='100%' height='100%' />
             <div className="overlay">
-                <h2>{portfolio[currentIndex]?.company_name}</h2>
+              <img src={portfolio[currentIndex]?.logo} alt={`${portfolio[currentIndex]?.company_name}-Logo`} width="60%"/>
             </div>
             </div>
             

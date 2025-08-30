@@ -24,7 +24,8 @@ function Services() {
   return (
     <div className="services" id="services">
       <h3 className='fade-in_service'>
-        We envision a <br /> transformative <br /> decade ahead
+        We craft jingles<br/>and music<br/>that inspire.
+        {/* We envision a transformative <br /> decade ahead */}
       </h3>
     </div>
   )
