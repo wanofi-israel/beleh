@@ -201,8 +201,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: FKGrosteskLight, sans-serif !important;
-  font-size: 1.4rem;
+  font-family: FKGrosteskRegular, sans-serif !important;
+    font-size: 1.8rem;
+    border-bottom: 1px solid;
+    width: fit-content;
+    padding-bottom: .5rem;
+    text-decoration: none;
 }
 
 /* ---------------- SERVICES ---------------- */
@@ -1012,6 +1016,70 @@
   width: 100%;
   aspect-ratio: 1/1;
 }
+.about-us_page {
+  padding: var(--padding);
+  padding-top: 12vh;
+  height: 100vh;
+  min-height: fit-content;
+}
+
+.about-us_page .slogan .sliding-word {
+  width: fit-content;
+  height: 110px !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliding-word .slider {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 400%;
+}
+
+.sliding-word .slider>* {
+  flex: 1;
+}
+
+.gradient-text {
+  background: linear-gradient(-60deg, var(--color-accent-blue), var(--color-primary-blue)) !important;
+  background-size: cover;
+  font-family: FKGrosteskLight, sans-serif !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+  font-size: clamp(1.5rem, 7vw, 3.6rem) !important;
+  font-weight: 800;
+  margin-top: .5rem;
+}
+
+.gradient-text.second {
+  background: linear-gradient(-60deg, orangered, red) !important;
+  background-size: cover;
+  font-family: FKGrosteskLight, sans-serif !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+.more {
+  height: fit-content;
+  color: var(--color-text);
+  padding: var(--padding);
+  font-size: clamp(1rem, 2.7vw, 1.6rem) !important;
+  font-weight: 800;
+  margin-top: .5rem;
+  font-family: FKGrosteskLight, sans-serif !important;
+  width: 75%;
+  min-width:300px;
+
+}
+
+
+
+
 @media (max-width:819.5px){
   .service-section-cards{
     height: 120vh;
@@ -1226,6 +1294,7 @@
 }
 
 }
-.stop-scrolling{
+
+.stop-scrolling {
   overflow: clip !important;
 }
