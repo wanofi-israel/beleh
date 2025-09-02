@@ -3,6 +3,8 @@ import gsap from 'gsap'
 import React, { useRef, useState } from 'react'
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 import { useMediaQuery } from 'react-responsive';
+import Logo from "../assets/images/blehLogo.png"
+
 function ValuesDetail() {
 
   const box = useRef()
@@ -34,6 +36,11 @@ function ValuesDetail() {
     }, {
       border: "1px solid #fd982a",
       ease: "none"
+    }, 0).fromTo(".sticky-image img", {
+      filter:"drop-shadow(15px 5px 30px rgba(51,112,255,1))",
+    }, {
+      filter:"drop-shadow(-15px -5px 30px #fd982a)",
+      ease: "none"
     }, 0);
 }
 }, []);
@@ -61,6 +68,7 @@ function ValuesDetail() {
             })
           }}
         >
+          <img src={Logo} alt="bleh-logo"/>
         </div>
       </div>
       <div className="values-right">

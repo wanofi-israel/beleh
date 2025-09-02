@@ -6,8 +6,19 @@ import Values from '../components/Values'
 import ValuesDetail from '../components/ValuesDetail'
 import Clients from '../components/Clients'
 import Portfolio from '../components/Portfolio'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 function Landing() {
+
+  useGSAP(()=>{
+gsap.to('.logoWhite',{
+            display:'flex'
+          },0)
+          gsap.to('.logoDark',{
+            display:'none'
+          })
+  },[])
   return (
     <div className='whole-wrrapper'>
       <Hero />

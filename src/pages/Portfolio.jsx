@@ -70,6 +70,12 @@ function Portfolio() {
           gsap.to('.navbar',{
             color:"var(--color-text-blue)"
           })
+          gsap.to('.logoWhite',{
+            display:'none'
+          })
+          gsap.to('.logoDark',{
+            display:'flex'
+          },0)
           gsap.to('.navbar',{
             scrollTrigger:{
                 trigger:'.portfolio-container',
@@ -78,9 +84,21 @@ function Portfolio() {
                 scrub:true,
                 onLeaveBack:()=>{
                 gsap.to('.navbar',{color:"var(--color-text-blue)"})
+                gsap.to('.logoDark',{
+            display:'flex'
+          },0)
+          gsap.to('.logoWhite',{
+            display:'none'
+          },0)
                 },
                 onEnter:()=>{
                 gsap.to('.navbar',{color:"var(--color-text)"})
+                gsap.to('.logoWhite',{
+            display:'flex'
+          },0)
+          gsap.to('.logoDark',{
+            display:'none'
+          },0)
                 }
             }
         })

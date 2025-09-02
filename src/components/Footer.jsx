@@ -30,23 +30,14 @@ const Footer = () => {
       <div className="footer-middle">
 
       <p className="footer-description">
-        This website is a general communication for informational purposes only
-        and is not and should not be construed as advice or a recommendation
-        concerning any security or other asset, or an offer to sell, or the
-        solicitation of an offer to buy, any security, product, service of
-        Hartmann Capital (together with its subsidiaries and affiliates,
-        “Hartmann”) or any fund for which Hartmann Capital serves as investment
+        Bleh Jingles is where stories find their sound. With passion, creativity, and purpose, 
+        we craft original jingles and sonic identities that capture attention, connect with audiences, 
+        and make every brand unforgettable.
        
       </p>
 
         <p className="footer-description">
-        manager or general partner, whether existing or contemplated, for which
-        an offer can be made only by such fund’s confidential private placement
-        memorandum and in compliance with applicable law. Hartmann Capital is
-        not registered as an investment adviser with the U.S. Securities and
-        Exchange Commission. Hartmann Capital is federally exempt under the
-        Investment Company Act, Section 3 (c)(1) Rule 506 (c), therefore, is not
-        required to register with the SEC or any state regulatory agency.
+        Founded by Natnael Girmachew, Bleh Jingles was built on a love for music and a dedication to helping brands stand out. We are not a licensing agency or distributor every project is a direct collaboration shaped by creativity, reliability, and purpose, ensuring each sound reflects the unique identity of our partners.
       </p>
       <div className="footer-social">
           <a href="#"><LinkedInIcon/></a>
