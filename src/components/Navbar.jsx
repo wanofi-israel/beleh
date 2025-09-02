@@ -45,7 +45,7 @@ function Navbar() {
       <div className={`navbar-right ${open?"open":""}`}>
         <ul>
             <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/offerings" aria-current={location.pathname.startsWith('/offerings') ? 'page' : undefined}>Offerings</Link> </li>
-            <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/portfolio/1" aria-current={location.pathname.startsWith('/portfolio') ? 'page' : undefined}>Portfolio</Link></li>
+            <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/portfolio/Tele-Birr" aria-current={location.pathname.startsWith('/portfolio') ? 'page' : undefined}>Portfolio</Link></li>
             <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/about"  aria-current={location.pathname.startsWith('/about') ? 'page' : undefined}>About</Link> </li>
             <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/insights"  aria-current={location.pathname.startsWith('/insights') ? 'page' : undefined}>Insights</Link></li>
         </ul>
