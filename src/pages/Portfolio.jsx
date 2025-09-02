@@ -109,8 +109,6 @@ function Portfolio() {
     
   let currentIndex=portfolio.findIndex(el=>el.company_name===project)
 
-  console.log(currentIndex);
-  
   return (
     <div className='portfolio-page'>
       <div className="portfolio-container">

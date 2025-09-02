@@ -28,16 +28,16 @@ function Clients() {
             scrollTl.resume()
         }}>
             <div className="crousal-items">
-                <div className="crousal-item"><img src={CBE} alt="CBE-Logo" width="60%"/></div>
-                <div className="crousal-item"><img src={TeleBirr} alt="CBE-Logo" width="60%"/></div>
-                <div className="crousal-item"><img src={Tedla} alt="CBE-Logo" width="60%"/></div>
+                <div className="crousal-item"><img src={CBE} alt="CBE-Logo" width="25%"/></div>
+                <div className="crousal-item"><img src={TeleBirr} alt="CBE-Logo" width="25%"/></div>
+                <div className="crousal-item"><img src={Tedla} alt="CBE-Logo" width="25%"/></div>
 
                 <div className="crousal-item">RIDE</div>
             </div>
             <div className="crousal-items">
-                <div className="crousal-item"><img src={CBE} alt="CBE-Logo" width="60%" height="60%"/></div>
-                <div className="crousal-item"><img src={TeleBirr} alt="CBE-Logo" width="60%" height="60%"/></div>
-                <div className="crousal-item"><img src={Tedla} alt="CBE-Logo" width="60%"/></div>
+                <div className="crousal-item"><img src={CBE} alt="CBE-Logo" width="25%" height="25%"/></div>
+                <div className="crousal-item"><img src={TeleBirr} alt="CBE-Logo" width="25%" height="25%"/></div>
+                <div className="crousal-item"><img src={Tedla} alt="CBE-Logo" width="25%"/></div>
 
                 <div className="crousal-item">RIDE</div>
             </div>

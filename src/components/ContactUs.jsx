@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-
+import { HashLink as Link } from 'react-router-hash-link';
 function ContactUs() {
   const linkRef=useRef(null)
   const hoverTl=gsap.timeline({
@@ -34,7 +34,7 @@ function ContactUs() {
             hoverTl.restart()
           }}
         >
-          <a href="">
+          <Link to='#contact_us'>
           <div className="after" ref={linkRef}>
             <div className="after-after"></div>
           </div>
@@ -45,7 +45,7 @@ function ContactUs() {
               </div>
             </div>
             Get in touch
-          </a>
+          </Link>
         </div>
       </div>
     </div>

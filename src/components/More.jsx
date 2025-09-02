@@ -23,7 +23,7 @@ function More() {
     },[])
     
   return (
-    <div className='more'>
+    <div className='more' id='more'>
       <div className="content">
         <h1>
              Founded by renowned lyricist and producer 

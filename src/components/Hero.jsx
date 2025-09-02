@@ -3,11 +3,11 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { SplitText } from 'gsap/all'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import { useNavigate } from 'react-router-dom';
 function Hero() {
 
-    setTimeout(()=>{
-        
-    })
+    const navigate=useNavigate()
+
     useGSAP(()=>{
             window.addEventListener('load',()=>{
             const splitSlogan=new SplitText('.slogan h1',{type:'lines,words'})
@@ -35,9 +35,14 @@ function Hero() {
                 duration:1,
                 delay:1
             })
-            gsap.from('.cta-discover',{
+
+            
+            gsap.fromTo('.cta-discover',{
                 opacity:0,
-                yPercent:100,
+                yPercent:100
+            },{
+               opacity:1,
+                yPercent:0,
                 ease:'power1.inOut',
                 delay:1.5
             })
@@ -56,7 +61,7 @@ function Hero() {
             We create immersive sound experiences that connect with your audience. 
             Original jingles, music, and audio branding that resonate with your audience.
         </p>
-        <div className="cta-discover">
+        <div className="cta-discover" onClick={()=>navigate('/about')}>
             Discover more <ArrowDownwardIcon sx={{fontSize:"36px"}}/>
         </div>
       </div>

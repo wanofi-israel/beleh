@@ -16,7 +16,6 @@ const ContactForm = () => {
 
   const handleSubmit =async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
     try {
      const respnse=await axios.post('http://localhost:8000/api/contact/',formData)
 
@@ -30,7 +29,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contactus-form-section">
+    <div className="contactus-form-section" id='contact_us'>
     <div className="contact-form-container">
       <h2>Let's get in touch!</h2>
       <form onSubmit={handleSubmit}>

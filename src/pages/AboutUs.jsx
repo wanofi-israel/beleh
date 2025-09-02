@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { SplitText } from 'gsap/all'
@@ -54,6 +54,11 @@ function AboutUs() {
         },"+=2").to('.slider',{
           yPercent:-50
         },"+=4")
+    },[])
+
+
+    useEffect(()=>{
+      window.scroll(0,0)
     },[])
   return (
     <>

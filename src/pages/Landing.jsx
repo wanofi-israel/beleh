@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
 import ServicesCards from '../components/ServicesCards'
@@ -19,6 +19,11 @@ gsap.to('.logoWhite',{
             display:'none'
           })
   },[])
+
+  useEffect(()=>{
+    window.scroll(0,0)
+  },[])
+
   return (
     <div className='whole-wrrapper'>
       <Hero />

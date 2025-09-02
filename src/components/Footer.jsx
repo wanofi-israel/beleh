@@ -3,26 +3,30 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import blehTypo from "../assets/images/blehTypoWhite.png"
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-logo">
-          <img src="/logo.png" alt="Hartmann Capital" />
+          <img src={blehTypo} alt="bleh-logo" height={50} style={{aspectRatio:9/6}} className='logoWhite'/>
         </div>
         <div className="footer-contacts">
           <div className="footer-contact">
-            <span className="footer-label">General Inquiries</span>
-            <a href="mailto:hq@hartmanncapital.com">hq@hartmanncapital.com</a>
+            <span className="footer-label">Email</span>
+            <a href="mailto:info@blehJingels.et">info@blehJingels.et</a>
           </div>
           <div className="footer-contact">
             <span className="footer-label">Phone No.</span>
             <a href="tel:+251911607511">+251 911 607 511</a>
           </div>
           <div className="footer-contact">
-            <span className="footer-label">Our Investors</span>
-            <a href="mailto:invest@hartmanncapital.com">
-              invest@hartmanncapital.com
+            <span className="footer-label">General Manager</span>
+            <a href="mailto:nathnael@blehJingels.et">
+              nathnael@blehJingels.et
             </a>
           </div>
         </div>
@@ -40,28 +44,24 @@ const Footer = () => {
         Founded by Natnael Girmachew, Bleh Jingles was built on a love for music and a dedication to helping brands stand out. We are not a licensing agency or distributor every project is a direct collaboration shaped by creativity, reliability, and purpose, ensuring each sound reflects the unique identity of our partners.
       </p>
       <div className="footer-social">
-          <a href="#"><LinkedInIcon/></a>
-          <a href="#"><InstagramIcon/></a>
-          <a href="#"><XIcon/></a>
-          <a href="#"><FacebookIcon/></a>
+          <Link href="#"><LinkedInIcon/></Link>
+          <Link href="#"><InstagramIcon/></Link>
+          <Link href="#"><XIcon/></Link>
+          <Link href="#"><FacebookIcon/></Link>
         </div>
       </div>
 
       <div className="footer-bottom">
         <ul className="footer-links">
-          <li>Offerings ▾</li>
-          <li>Portfolio</li>
-          <li>About</li>
-          <li>News & Insights</li>
-          <li>Contact</li>
-        </ul>
-        <ul className="footer-legal">
-          <li>Privacy Statement</li>
-          <li>Terms of Use</li>
+          <Link to='/'>Home</Link>
+          <HashLink to="/#services">Services</HashLink>
+          <Link to='/portfolio/CBE'>Portfolio</Link>
+          <Link to='/about'>About</Link>
+          <HashLink to="#contact_us">Contact</HashLink>
         </ul>
         
         <div className="footer-credits">
-          <span>Design by Dylan</span> <span>Code by Dennis</span>
+          &copy; 2025 Bleh Jingles. All rights reserved.
         </div>
       </div>
     </footer>

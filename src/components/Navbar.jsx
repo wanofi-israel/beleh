@@ -8,6 +8,7 @@ import LogoDesktop from "../assets/images/blehLogoDesktopWhite.png"
 import LogoDesktopDark from "../assets/images/blehLogoDesktopDark.png"
 import blehTypo from "../assets/images/blehTypoWhite.png"
 import blehTypoDark from "../assets/images/blehTypoDark.png"
+import { HashLink } from 'react-router-hash-link'
 function Navbar() {
 
   const [open,setOpen]=useState(false)
@@ -34,7 +35,6 @@ function Navbar() {
       })
     }
   },[open])
-  console.log(location.pathname);
   
   return (
     <div className='navbar'>
@@ -52,13 +52,13 @@ function Navbar() {
       <div className={`navbar-right ${open?"open":""}`}>
         <ul>
             <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/"  aria-current={location.pathname==='/' ? 'page' : undefined}>Home</Link></li>
-            <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/offerings" aria-current={location.pathname.startsWith('/offerings') ? 'page' : undefined}>Offerings</Link> </li>
+            <li onClick={()=>setOpen(false)} className='nav-links'><HashLink to="/#services" aria-current={location.pathname.startsWith('/offerings') ? 'page' : undefined}>Services</HashLink> </li>
             <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/portfolio/Tele-Birr" aria-current={location.pathname.startsWith('/portfolio') ? 'page' : undefined}>Portfolio</Link></li>
             <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/about"  aria-current={location.pathname.startsWith('/about') ? 'page' : undefined}>About</Link> </li>
         </ul>
-        <button className="cta">
+        <HashLink to="#contact_us" className="cta">
             Contact
-        </button>
+        </HashLink>
       </div>
       <div className={`humburger-menu ${open?"open":""}`} onClick={toggleMenu}>
           <div className="bar"></div>

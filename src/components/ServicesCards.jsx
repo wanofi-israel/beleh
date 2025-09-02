@@ -14,9 +14,9 @@ function ServicesCards() {
                 trigger:'.service-section-cards',
                 start:'top top',
                 end:'bottom -20%',
-                scrub:true
+                scrub:1.5
               },
-              y:-40
+              y:0
             })
         }
     },[])
