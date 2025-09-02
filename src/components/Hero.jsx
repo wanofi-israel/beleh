@@ -14,14 +14,16 @@ function Hero() {
             yPercent:100,
             ease:'power1.inOut',
             stagger:.06,
-            duration:1
+            duration:1,
+            delay:1
         })
         gsap.from(splitSlogan.words,{
             opacity:0,
             yPercent:100,
             ease:'power1.inOut',
             stagger:.08,
-            duration:1
+            duration:1,
+            delay:1
         })
         gsap.from(splitBrief.lines,{
             opacity:0,
@@ -29,13 +31,13 @@ function Hero() {
             ease:'power1.inOut',
             stagger:.06,
             duration:1,
-            delay:1
+            delay:2
         })
         gsap.from('.cta-discover',{
             opacity:0,
             yPercent:100,
             ease:'power1.inOut',
-            delay:1.5
+            delay:2.5
         })
     },[])
   return (
