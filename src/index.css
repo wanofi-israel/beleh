@@ -223,7 +223,7 @@
 
 .fade-in_service {
   text-align: right;
-  font-size: clamp(2.5rem, 6.9vw, 5rem);
+  font-size: clamp(1.8rem, 6.9vw, 5rem);
   padding: 1rem 3rem;
   font-family: FKGrosteskThin, sans-serif !important;
   color: var(--color-text);
@@ -1058,7 +1058,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(-60deg, var(--color-accent-blue), var(--color-primary-blue)) !important;
+  background: linear-gradient(60deg, var(--color-accent-blue), var(--color-primary-blue)) !important;
   background-size: cover;
   font-family: FKGrosteskLight, sans-serif !important;
   -webkit-background-clip: text !important;
@@ -1071,7 +1071,7 @@
 }
 
 .gradient-text.second {
-  background: linear-gradient(-60deg, orangered, red) !important;
+  background: linear-gradient(60deg, #ecb375 30%, #fd982a) !important;
   background-size: cover;
   font-family: FKGrosteskLight, sans-serif !important;
   -webkit-background-clip: text !important;

@@ -51,10 +51,10 @@ function Navbar() {
       </div>
       <div className={`navbar-right ${open?"open":""}`}>
         <ul>
-            <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/"  aria-current={location.pathname==='/' ? 'page' : undefined}>Home</Link></li>
-            <li onClick={()=>setOpen(false)} className='nav-links'><HashLink to="/#services" aria-current={location.pathname.startsWith('/offerings') ? 'page' : undefined}>Services</HashLink> </li>
-            <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/portfolio/Tele-Birr" aria-current={location.pathname.startsWith('/portfolio') ? 'page' : undefined}>Portfolio</Link></li>
-            <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/about"  aria-current={location.pathname.startsWith('/about') ? 'page' : undefined}>About</Link> </li>
+            <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/"  aria-current={location.pathname==='/'&& location.hash==='' ? 'page' : undefined}>Home</Link></li>
+            <li onClick={()=>setOpen(false)} className='nav-links'><HashLink to="/#services" aria-current={location.hash.startsWith('#services') ? 'page' : undefined}>Services</HashLink> </li>
+            <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/portfolio/Tele-Birr" aria-current={location.pathname.startsWith('/portfolio')&& location.hash==='' ? 'page' : undefined}>Portfolio</Link></li>
+            <li onClick={()=>setOpen(false)} className='nav-links'><Link to="/about"  aria-current={location.pathname.startsWith('/about')&& location.hash==='' ? 'page' : undefined}>About</Link> </li>
         </ul>
         <HashLink to="#contact_us" className="cta">
             Contact

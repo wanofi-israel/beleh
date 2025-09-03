@@ -44,10 +44,10 @@ const Footer = () => {
         Founded by Natnael Girmachew, Bleh Jingles was built on a love for music and a dedication to helping brands stand out. We are not a licensing agency or distributor every project is a direct collaboration shaped by creativity, reliability, and purpose, ensuring each sound reflects the unique identity of our partners.
       </p>
       <div className="footer-social">
-          <Link href="#"><LinkedInIcon/></Link>
-          <Link href="#"><InstagramIcon/></Link>
-          <Link href="#"><XIcon/></Link>
-          <Link href="#"><FacebookIcon/></Link>
+          <Link to="https://et.linkedin.com/company/blehjingles/" target="_blank"><LinkedInIcon/></Link>
+          <Link to="https://www.instagram.com/blehjingles/?hl=en/" target="_blank"><InstagramIcon/></Link>
+          <Link to="https://x.com/blehjingles/" target="_blank"><XIcon/></Link>
+          <Link to="https://www.facebook.com/blehjingles/" target="_blank"><FacebookIcon/></Link>
         </div>
       </div>
 
