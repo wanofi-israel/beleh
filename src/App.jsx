@@ -31,7 +31,7 @@ function App() {
     <>
       {/* Persistent Video */}
       <video 
-        // autoPlay 
+        autoPlay 
         playsInline 
         loop 
         muted  
