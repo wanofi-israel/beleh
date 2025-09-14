@@ -37,8 +37,9 @@ function App() {
         muted  
         preload="auto" 
         className="bg-video"
+        style={{backgroundColor:"black"}}
       >
-        <source src="/videos/bgWave.mp4" type="video/webm"/>
+        <source src="/videos/bgWave.mp4" type="video/mp4"/>
       </video>
 
       {/* Router handles only content */}

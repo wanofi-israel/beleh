@@ -9,7 +9,7 @@ import portfolio from '../../constants/Portfolio';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 function Portfolio() {
-  const isMobile=useMediaQuery({maxWidth:664})
+  const isMobile=useMediaQuery({maxWidth:770})
 
   const navigate=useNavigate()
   const {project}=useParams()
@@ -43,9 +43,12 @@ function Portfolio() {
           ease:'none'
         })
         if(isMobile){
-          gsap.to('.nav-logo,.navbar-center',{
-            color:"var(--color-text-blue)"
-          })
+          gsap.to('.logoWhite',{
+            display:'none'
+          },0)
+          gsap.to('.logoDark',{
+            display:'flex'
+          },0)
           gsap.to('.navbar',{
             color:"var(--color-text)"
           })
@@ -57,10 +60,21 @@ function Portfolio() {
                 end:'bottom top',
                 scrub:true,
                 onLeaveBack:()=>{
-                gsap.to('.nav-logo,.navbar-center',{color:"var(--color-text-blue)"})
+                
+          gsap.to('.logoWhite',{
+            display:'none'
+          },0)
+          gsap.to('.logoDark',{
+            display:'flex'
+          },0)
                 },
                 onEnter:()=>{
-                gsap.to('.nav-logo,.navbar-center',{color:"var(--color-text)"})
+          gsap.to('.logoWhite',{
+            display:'flex'
+          },0)
+          gsap.to('.logoDark',{
+            display:'none'
+          },0)
                 }
             }
         })
@@ -72,7 +86,7 @@ function Portfolio() {
           })
           gsap.to('.logoWhite',{
             display:'none'
-          })
+          },0)
           gsap.to('.logoDark',{
             display:'flex'
           },0)

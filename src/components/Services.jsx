@@ -19,6 +19,23 @@ function Services() {
             stagger:.2,
             ease:'expo.out'
         })
+
+        gsap.to('.services, .service-section-cards',{
+          scrollTrigger:{
+            trigger:'body',
+            onEnter:()=>{
+              gsap.to('.navbar',{
+          color:"var(--color-text)"
+    })
+            },
+            onEnterBack:()=>{
+              gsap.to('.navbar',{
+          color:"var(--color-text)"
+    })
+            }
+          }
+        })
+
     },[])
 
   return (
