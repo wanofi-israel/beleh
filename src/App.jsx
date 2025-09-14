@@ -38,7 +38,7 @@ function App() {
         preload="auto" 
         className="bg-video"
       >
-        <source src="/videos/Bleh.webm" type="video/webm"/>
+        <source src="/videos/bgWave.mp4" type="video/webm"/>
       </video>
 
       {/* Router handles only content */}
