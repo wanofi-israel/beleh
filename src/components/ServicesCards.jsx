@@ -39,16 +39,24 @@ function ServicesCards() {
   return (
     <div className='service-section-cards'>
     <ServiceCard
-    text="Jingle & Music Production"
+    text="Lyric and Melody Creation"
+    brief="Crafting original lyrics and melodies that bring your brand's message to life."
     />
     <ServiceCard
-    text="Promotional Vocal Recording"
+    text="Composition"
+    brief="Creating unique musical compositions tailored to your brand and vision"
     />
     <ServiceCard
-    text="Voice Artist Facilitation"
+    text="Instrumental and Vocal Studio Recording"
+    brief="High-quality instrumental and vocal recordings to give your sound a professional edge."
     />
     <ServiceCard
-    text="Music Production Supervision & More"
+    text="Mixing and Mastering"
+    brief="Polishing your tracks with clarity, balance, and professional sound."
+    />
+    <ServiceCard
+    text="One stop Jingle Production"
+    brief="Complete jingle production from concept to final track."
     />
     </div>
   )

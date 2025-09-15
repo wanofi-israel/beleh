@@ -53,13 +53,13 @@ function Hero() {
         <div className="content">
             <div className="fade-in slogan">
         <h1>
-           Your  <br />Brand Voice,<br /> Amplified.
+           ዘመኑ <br /> የብልሆች ነው
         </h1>
       </div>
       <div className="fade-in brief">
         <p>
-            We create immersive sound experiences that connect with your audience. 
-            Original jingles, music, and audio branding that resonate with your audience.
+            This is the time for those willing to promote, but it's truly the moment for those smart enough to promote their brand
+            with vision and creativity. Bleh stands ready to craft the best sound and deliver powerful promotions that makes your brand unforgettable. 
         </p>
         <div className="cta-discover" onClick={()=>navigate('/about')}>
             Discover more <ArrowDownwardIcon sx={{fontSize:"36px"}}/>

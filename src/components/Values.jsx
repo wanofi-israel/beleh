@@ -22,7 +22,7 @@ const tl=gsap.timeline({
     },[])
   return (
     <div className="values" id="values">
-      <h3 className="values-header">Our Values Drive <br/> Every Sound We Create.</h3>
+      <h3 className="values-header">Our Value</h3>
     </div>
   );
 }

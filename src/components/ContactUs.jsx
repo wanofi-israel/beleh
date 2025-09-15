@@ -22,7 +22,7 @@ function ContactUs() {
   return (
     <div className='contactus-section'>
       <div>
-        <h1>Learn more about <br />our offerings</h1>
+        <h1>Learn more</h1>
       </div>
       <div>
         <div

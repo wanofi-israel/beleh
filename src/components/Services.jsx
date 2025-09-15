@@ -6,6 +6,7 @@ import { SplitText } from 'gsap/all'
 function Services() {
     useGSAP(()=>{
         const splitService=new SplitText('.fade-in_service',{type:'lines'})
+        const splitServicedesc=new SplitText('.fade-in_servicebrief',{type:'lines'})
         const tl=gsap.timeline({
             scrollTrigger:{
                 trigger:"#services",
@@ -19,7 +20,13 @@ function Services() {
             stagger:.2,
             ease:'expo.out'
         })
-
+      tl.from(splitServicedesc.lines,{
+         opacity:0,
+            yPercent:100,
+            duration:2,
+            stagger:.2,
+            ease:'expo.out'
+      },0)
         gsap.to('.services, .service-section-cards',{
           scrollTrigger:{
             trigger:'body',
@@ -41,8 +48,16 @@ function Services() {
   return (
     <div className="services" id="services">
       <h3 className='fade-in_service'>
-        We craft jingles<br/>and music that inspire.
+        Your Brand<br/>Voice Amplified
         {/* We envision a transformative <br /> decade ahead */}
+      </h3>
+      <div className="fade-in_servicebrief">
+      <p className="services-desc">
+        We create immersive sound experiences that connect with your audience. Original jingles, music, and audio branding that resonate with your audience.
+      </p>
+      </div>
+      <h3 className="fade-in_service">
+        Services we offer
       </h3>
     </div>
   )

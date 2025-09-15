@@ -31,7 +31,7 @@ gsap.to('.logoWhite',{
       <ServicesCards/>
       <Values />
       <ValuesDetail />
-      <Clients />
+      {/* <Clients /> */}
       <Portfolio />
     </div>
   )

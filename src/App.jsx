@@ -39,7 +39,7 @@ function App() {
         className="bg-video"
         style={{backgroundColor:"black"}}
       >
-        <source src="/videos/bgWave.mp4" type="video/mp4"/>
+        <source src="/videos/Bleh.webm" type="video/webm"/>
       </video>
 
       {/* Router handles only content */}
