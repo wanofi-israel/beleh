@@ -1121,7 +1121,47 @@
 }
 
 
+.services-page{
+  height: 100vh;
+  padding: var(--padding);
+  padding-top: 12vh;
+}
+.services-page .services-list{
+  display: flex;
+  flex-direction: column;
+}
 
+.services-page .services-list .service-rw{
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.services-list .service-rw .service-name{
+  font-size: clamp(1.2rem,2vw,1.5rem);
+  font-family: FKGrosteskRegular, sans-serif !important;
+}
+
+.services-list .service-rw .service-brief{
+  width: 60%;
+  font-size:1rem;
+  font-family: FKGrosteskRegular, sans-serif !important;
+}
+
+.services-list .service-rw .service-img{
+  position: absolute;
+  width: 15%;
+  right: 2rem;
+  top:50%;
+  transform: translateY(-50%);
+  visibility: hidden;
+}
+
+.service-rw .service-img img{
+  width: 100%;
+}
 
 @media (max-width:819.5px){
   .service-section-cards{

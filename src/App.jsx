@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import ContactUs from "./components/ContactUs";
 import ContactForm from "./components/ContactForm";
 import AboutUs from "./pages/AboutUs";
+import Services from "./pages/Services";
 function App() {
   gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -50,6 +51,7 @@ function App() {
             <Route index element={<Landing/>}/>
             <Route path="/portfolio/:project" element={<Portfolio/>}/>
             <Route path="/about" element={<AboutUs/>}/>
+            <Route path="/services" element={<Services/>}/>
           </Routes>
           <ContactUs />
           <ContactForm/>
