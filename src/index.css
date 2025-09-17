@@ -1079,6 +1079,42 @@
   overflow: hidden;
   position: relative;
 }
+.about-text{
+   width: 33%;
+  font-family: FKGrosteskLight, sans-serif !important;
+  font-size: 1.3rem;
+  min-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--color-bg-bluish);
+  font-weight: lighter;
+  text-wrap: wrap;
+  
+}
+
+.about-container{
+  display: flex;
+  flex-direction: row;
+  padding: 0px 40px;
+}
+.about-img{
+  width:450px;
+}
+.about-thecompany{
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 25%;
+
+}
+.mission-about{
+  display: flex;
+  flex-direction: row;
+  padding: 0px 40px;
+ 
+}
 
 .sliding-word .slider {
   display: flex;
