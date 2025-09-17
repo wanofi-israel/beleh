@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { SplitText, ScrollTrigger } from "gsap/all";
@@ -12,9 +12,12 @@ import ContactForm from "./components/ContactForm";
 import AboutUs from "./pages/AboutUs";
 import Services from "./pages/Services";
 function App() {
+  const vidRef=useRef(null)
   gsap.registerPlugin(SplitText, ScrollTrigger);
 
   useGSAP(() => {
+
+    vidRef.playbackRate = 0.5;
     ScrollTrigger.create({
       trigger: "body",
       start: "top top",
@@ -39,10 +42,13 @@ function App() {
         preload="auto" 
         className="bg-video"
         style={{backgroundColor:"black"}}
+        ref={vidRef}
       >
-        <source src="/videos/Bleh.webm" type="video/webm"/>
+        <source src="/videos/Whiteblob.webm" type="video/webm"/>
       </video>
+      <div className="bg-overlay">
 
+      </div>
       {/* Router handles only content */}
       <Router>
         <div className="app">

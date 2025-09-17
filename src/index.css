@@ -41,6 +41,7 @@
   /* Text and background */
   --color-text: #f2f2f2;
   --color-text-blue: #002fff;
+  --color-text-blue-dark: #0a2448;
   --color-bg-accent: #1fa5fd;
   --color-bg-bluish: #ecf5ff;
   --color-border: #002fff5b;
@@ -66,6 +67,12 @@
   min-height: 100dvh;
   object-fit: cover;
 }
+.bg-overlay{
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.363);
+  backdrop-filter: blur(15px);
+}
 /* ---------------- NAVBAR ---------------- */
 .navbar {
   display: flex;
@@ -73,7 +80,7 @@
   justify-content: space-between;
   padding: var(--padding);
   height: 12vh;
-  color: var(--color-text);
+  color: var(--color-text-blue-dark);
   font-family: FKGrosteskRegular, sans-serif;
   position: fixed;
   width: 100%;
@@ -168,7 +175,7 @@
   height: 90vh;
   min-height: 90vh;
   width: 100%;
-  color: var(--color-text);
+  color: var(--color-text-blue-dark);
   padding: var(--padding);
   padding-top: 12vh;
 }
@@ -1158,7 +1165,7 @@
 
 
 .services-page{
-  height: 100vh;
+  min-height: 100vh;
   padding: var(--padding);
   padding-top: 12vh;
 }
@@ -1172,9 +1179,18 @@
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-primary-blue);
+  z-index:0;
+  transition: padding .3s ease-in-out;
 }
-
+.services-page .services-list .service-rw.hover{
+  z-index: 2;
+  padding-left: 1.5rem;
+}
+.services-page .services-list .service-rw:nth-child(1){
+  border-top: 1px solid var(--color-primary-blue);
+}
 .services-list .service-rw .service-name{
   font-size: clamp(1.2rem,2vw,1.5rem);
   font-family: FKGrosteskRegular, sans-serif !important;
@@ -1188,17 +1204,43 @@
 
 .services-list .service-rw .service-img{
   position: absolute;
-  width: 15%;
+  width: 20%;
+  height: 350px;
+  min-width: 180px;
   right: 2rem;
   top:50%;
-  transform: translateY(-50%);
   visibility: hidden;
+  transform: translateY(-50%) scale(.8);
+  transition: transform .3s ease-in-out;
+  z-index: 2;
 }
-
+.service-rw .service-img.visible{
+  visibility: visible !important;
+  transform: translateY(-50%) scale(1) !important;
+}
 .service-rw .service-img img{
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+
+@media (max-width:590px) {
+  .services-list .service-rw{
+    flex-direction: column-reverse;
+  }
+  .services-list .service-rw .service-name,.services-list .service-rw .service-brief{
+    width:100%
+  }
+  .services-list .service-rw .service-img{
+    position: relative;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+  }
+}
 @media (max-width:819.5px){
   .service-section-cards{
     height: 120vh;
