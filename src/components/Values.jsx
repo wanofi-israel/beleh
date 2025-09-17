@@ -19,6 +19,36 @@ const tl=gsap.timeline({
             stagger:.06
         })
         
+        gsap.to('.navbar',{
+          scrollTrigger:{
+            trigger:'.values',
+            start:"top top",
+            end:"bottom top",
+            markers:true,
+            onEnter:()=>{
+              gsap.to('.navbar',{
+              color:'var(--color-text)'
+    })
+    gsap.to('.logoWhite',{
+      display:"flex",
+    },0)
+    gsap.to('.logoDark',{
+      display:"none",
+    },0)
+            },
+            onLeaveBack:()=>{
+              gsap.to('.navbar',{
+              color:'var(--color-text-blue)'
+    })
+    gsap.to('.logoWhite',{
+      display:"none",
+    },0)
+    gsap.to('.logoDark',{
+      display:"flex",
+    },0)
+            }
+          }
+        })
     },[])
   return (
     <div className="values" id="values">

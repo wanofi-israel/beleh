@@ -1,4 +1,6 @@
+import { useGSAP } from "@gsap/react";
 import axios from "axios";
+import gsap from "gsap";
 import React, { useState } from "react";
 
 
@@ -28,6 +30,37 @@ const ContactForm = () => {
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
+  useGSAP(()=>{
+    gsap.to('.contactus-form-section',{
+                scrollTrigger:{
+                  trigger:'.contactus-form-section',
+                  start:"top top",
+                  end:'bottom top',
+                  onEnter:()=>{
+                    gsap.to('.navbar',{
+      color:'var(--color-text)'
+    })
+    gsap.to('.logoWhite',{
+      display:"flex",
+    },0)
+    gsap.to('.logoDark',{
+      display:"none",
+    },0)
+                  },
+                  onLeaveBack:()=>{
+                    gsap.to('.navbar',{
+      color:'var(--color-text-blue)'
+    })
+    gsap.to('.logoWhite',{
+      display:"none",
+    },0)
+    gsap.to('.logoDark',{
+      display:"flex",
+    },0)
+                  }
+                }
+              })
+  },[])
   return (
     <div className="contactus-form-section" id='contact_us'>
     <div className="contact-form-container">

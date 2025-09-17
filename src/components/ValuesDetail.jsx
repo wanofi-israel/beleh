@@ -63,6 +63,20 @@ function ValuesDetail() {
           },
           0
         );
+
+         gsap.to('.navbar',{
+          scrollTrigger:{
+            trigger:'.container',
+            start:"top top",
+            end:"bottom top",
+            markers:true,
+            onEnterBack:()=>{
+              gsap.to('.navbar',{
+              color:'var(--color-text)'
+    })
+            }
+          }
+        })
     }
   }, []);
   return (

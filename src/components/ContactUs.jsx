@@ -17,6 +17,36 @@ function ContactUs() {
               }).to('.after-after',{
                 xPercent:200
               })
+
+              gsap.to('contactus-section',{
+                scrollTrigger:{
+                  trigger:'.contactus-section',
+                  start:"top top",
+                  end:"bottom top",
+                  onEnter:()=>{
+        gsap.to('.navbar',{
+          color:"var(--color-text-blue)"
+    })
+    gsap.to('.logoWhite',{
+            display:'none'
+          },0)
+          gsap.to('.logoDark',{
+            display:'flex'
+          },0)
+      },
+      onEnterBack:()=>{
+        gsap.to('.navbar',{
+          color:"var(--color-text-blue)"
+    })
+    gsap.to('.logoWhite',{
+            display:'none'
+          },0)
+          gsap.to('.logoDark',{
+            display:'flex'
+          },0)
+      },
+                }
+              })
   },[])
 
   return (

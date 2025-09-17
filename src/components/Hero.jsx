@@ -46,6 +46,16 @@ function Hero() {
                 ease:'power1.inOut',
                 delay:1.5
             })
+
+            gsap.to('.navbar',{
+      color:'var(--color-text-blue)'
+    })
+    gsap.to('.logoWhite',{
+      display:"none",
+    },0)
+    gsap.to('.logoDark',{
+      display:"flex",
+    },0)
         })
         },[])
   return (

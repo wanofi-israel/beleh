@@ -8,11 +8,40 @@ import Mastering from "../assets/images/mastering.jpeg"
 import { useGSAP } from '@gsap/react'
 import ServicesItems from '../components/ServicesItems'
 import { useMediaQuery } from 'react-responsive'
+import gsap from 'gsap'
+import { SplitText } from 'gsap/all'
 function Services() {
 
     const isMobile=useMediaQuery({maxWidth:590})
     const listRef=useRef(null)
     useGSAP(()=>{
+
+        const splitSlogan=new SplitText('.slogan h1',{type:'lines,words'})
+            const splitBrief=new SplitText('.brief p',{type:'lines'})
+    
+            gsap.from(splitSlogan.lines,{
+                opacity:0,
+                yPercent:100,
+                ease:'power1.inOut',
+                stagger:.06,
+                duration:1
+            })
+            gsap.from(splitSlogan.words,{
+                opacity:0,
+                yPercent:100,
+                ease:'power1.inOut',
+                stagger:.08,
+                duration:1
+            })
+            gsap.from(splitBrief.lines,{
+                opacity:0,
+                yPercent:100,
+                ease:'power1.inOut',
+                stagger:.06,
+                duration:1,
+                delay:1
+            })
+
         if(!isMobile){
             Array.from(listRef.current?.children || []).forEach((element) => {
                 element.addEventListener("mouseenter",()=>{
@@ -29,6 +58,18 @@ function Services() {
     },[])
   return (
     <div className='services-page'>
+        <div className="content">
+            <div className="fade-in slogan">
+        <h1>
+           Creative Jingle <br /> Production Services
+        </h1>
+      </div>
+      <div className="fade-in brief">
+        <p>
+            We transform your brand message into music that resonates. From concept to final broadcast, our team delivers professional jingles that inspire, engage, and leave a lasting impression.
+        </p>
+        </div>
+        </div>
       <div className="services-list" ref={listRef}>
         <ServicesItems
             name="Lyric Creation"

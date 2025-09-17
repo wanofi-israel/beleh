@@ -80,7 +80,7 @@
   justify-content: space-between;
   padding: var(--padding);
   height: 12vh;
-  color: var(--color-text-blue-dark);
+  color: var(--color-text-blue);
   font-family: FKGrosteskRegular, sans-serif;
   position: fixed;
   width: 100%;
@@ -232,7 +232,7 @@
 .fade-in_service {
   font-size: clamp(1.8rem, 6.9vw, 5rem);
   font-family: FKGrosteskThin, sans-serif !important;
-  color: var(--color-text);
+  color: var(--color-text-blue-dark);
   white-space: nowrap !important;
 }
 .fade-in_service:first-child{
@@ -248,7 +248,7 @@
   display: flex;
   flex-direction: column;
   gap: .5rem;
-  color:var(--color-text);
+  color:var(--color-text-blue-dark);
 }
 
 .service-section-cards {
@@ -604,7 +604,7 @@
 .contactus-section h1 {
   white-space: nowrap !important;
   width: fit-content;
-  color: var(--color-text);
+  color: var(--color-text-blue-dark);
   font-size: clamp(2rem, 5vw, 4.5rem);
   font-family: FKGrosteskLight, sans-serif !important;
   width: 60%;
@@ -1132,10 +1132,42 @@
   min-height: 100vh;
   padding: var(--padding);
   padding-top: 12vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
+
+.services-page>.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.services-page>.content>.slogan {
+  font-size: clamp(1.5rem, 5vw, 2.6rem);
+  margin-block: auto;
+  font-family: FKGrosteskLight, sans-serif !important;
+  line-height: 1.2;
+  min-width: 300px;
+}
+
+.services-page>.content>.brief {
+  width: 33%;
+  font-family: FKGrosteskLight, sans-serif !important;
+  font-size: 1.3rem;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .services-page .services-list{
   display: flex;
   flex-direction: column;
+  padding-block: 2rem;
 }
 
 .services-page .services-list .service-rw{
@@ -1187,6 +1219,8 @@
   height: 100%;
   object-fit: cover;
 }
+
+
 
 
 @media (max-width:590px) {
