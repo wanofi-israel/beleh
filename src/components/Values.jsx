@@ -24,7 +24,6 @@ const tl=gsap.timeline({
             trigger:'.values',
             start:"top top",
             end:"bottom top",
-            markers:true,
             onEnter:()=>{
               gsap.to('.navbar',{
               color:'var(--color-text)'

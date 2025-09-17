@@ -69,7 +69,6 @@ function ValuesDetail() {
             trigger:'.container',
             start:"top top",
             end:"bottom top",
-            markers:true,
             onEnterBack:()=>{
               gsap.to('.navbar',{
               color:'var(--color-text)'
