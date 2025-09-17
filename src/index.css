@@ -41,6 +41,7 @@
   /* Text and background */
   --color-text: #f2f2f2;
   --color-text-blue: #002fff;
+  --color-text-blue-dark: #0a2448;
   --color-bg-accent: #1fa5fd;
   --color-bg-bluish: #ecf5ff;
   --color-border: #002fff5b;
@@ -66,6 +67,12 @@
   min-height: 100dvh;
   object-fit: cover;
 }
+.bg-overlay{
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.363);
+  backdrop-filter: blur(15px);
+}
 /* ---------------- NAVBAR ---------------- */
 .navbar {
   display: flex;
@@ -73,7 +80,7 @@
   justify-content: space-between;
   padding: var(--padding);
   height: 12vh;
-  color: var(--color-text);
+  color: var(--color-text-blue-dark);
   font-family: FKGrosteskRegular, sans-serif;
   position: fixed;
   width: 100%;
@@ -168,7 +175,7 @@
   height: 90vh;
   min-height: 90vh;
   width: 100%;
-  color: var(--color-text);
+  color: var(--color-text-blue-dark);
   padding: var(--padding);
   padding-top: 12vh;
 }
