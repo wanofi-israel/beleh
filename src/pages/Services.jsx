@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Lyric from "../assets/images/lyrics.jpeg"
 import Melody from "../assets/images/melody.jpeg"
 import Instrumental from "../assets/images/instrumental.jpeg"
@@ -14,6 +14,9 @@ function Services() {
 
     const isMobile=useMediaQuery({maxWidth:590})
     const listRef=useRef(null)
+    useEffect(() => {
+        window.scroll(0, 0);
+      }, []);
     useGSAP(()=>{
 
         const splitSlogan=new SplitText('.slogan h1',{type:'lines,words'})

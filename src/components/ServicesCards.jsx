@@ -6,13 +6,13 @@ import { useMediaQuery } from 'react-responsive'
 
 function ServicesCards() {
     const isMobile=useMediaQuery({maxWidth:819.5})
-    const tl=gsap.timeline({
-            scrollTrigger:{
-                trigger:"#services",
-                start:'top center'
-            }
-        })
     useGSAP(()=>{
+      const tl=gsap.timeline({
+              scrollTrigger:{
+                  trigger:".service-section-cards",
+                  start:'top center'
+              }
+          })
 
         if(!isMobile){
             gsap.to('.servicecard',{
@@ -28,8 +28,7 @@ function ServicesCards() {
             tl.from('.servicecard',{
               opacity:0,
               y:100,
-              stagger:.06,
-              duration:2
+              stagger:.2
             })
         }
     },[])

@@ -54,7 +54,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <ul className="footer-links">
           <Link to='/'>Home</Link>
-          <HashLink to="/#services">Services</HashLink>
+          <Link to="/services">Services</Link>
           <Link to='/portfolio/CBE'>Portfolio</Link>
           <Link to='/about'>About</Link>
           <HashLink to="#contact_us">Contact</HashLink>
