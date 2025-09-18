@@ -18,7 +18,7 @@ function ContactUs() {
                 xPercent:200
               })
 
-              gsap.to('contactus-section',{
+              gsap.to('.contactus-section',{
                 scrollTrigger:{
                   trigger:'.contactus-section',
                   start:"top top",

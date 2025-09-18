@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-logo">
-          <img src={blehTypo} alt="bleh-logo" height={50} style={{aspectRatio:9/6}} className='logoWhite'/>
+          <img src={blehTypo} alt="bleh-logo" height={50} style={{aspectRatio:9/6}} className='logoWhiteFooter'/>
         </div>
         <div className="footer-contacts">
           <div className="footer-contact">

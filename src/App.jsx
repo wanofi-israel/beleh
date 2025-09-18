@@ -11,6 +11,7 @@ import ContactUs from "./components/ContactUs";
 import ContactForm from "./components/ContactForm";
 import AboutUs from "./pages/AboutUs";
 import Services from "./pages/Services";
+import Map from "./components/Map";
 function App() {
   const vidRef=useRef(null)
   gsap.registerPlugin(SplitText, ScrollTrigger);
@@ -61,6 +62,7 @@ function App() {
           </Routes>
           <ContactUs />
           <ContactForm/>
+          <Map/>
           <Footer/>
         </div>
       </Router>

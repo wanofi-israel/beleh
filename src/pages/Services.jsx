@@ -41,7 +41,12 @@ function Services() {
                 duration:1,
                 delay:1
             })
-
+            gsap.to('.logoWhite',{
+                display:'none'
+            },0)
+            gsap.to('.logoDark',{
+                display:'flex'
+            },0)
         if(!isMobile){
             Array.from(listRef.current?.children || []).forEach((element) => {
                 element.addEventListener("mouseenter",()=>{
