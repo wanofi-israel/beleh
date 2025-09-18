@@ -64,7 +64,7 @@ function ValuesDetail() {
           0
         );
 
-         gsap.to('.navbar',{
+         gsap.to('.container',{
           scrollTrigger:{
             trigger:'.container',
             start:"top top",

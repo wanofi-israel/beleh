@@ -25,12 +25,12 @@ function ServicesCards() {
             trigger:'body',
             onEnter:()=>{
               gsap.to('.navbar',{
-          color:"var(--color-text)"
+          // color:"var(--color-text)"
     })
             },
             onEnterBack:()=>{
               gsap.to('.navbar',{
-          color:"var(--color-text)"
+          // color:"var(--color-text)"
     })
             }
           }
