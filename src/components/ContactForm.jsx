@@ -17,9 +17,15 @@ const ContactForm = () => {
   };
 
   const handleSubmit =async (e) => {
+    
     e.preventDefault();
     try {
-     const respnse=await axios.post('http://localhost:8000/api/contact/',formData)
+     const respnse=await axios.post(`${import.meta.env.VITE__URL}`,formData, {
+  headers: {
+    Authorization: `${import.meta.env.VITE__API_KEY}`
+  },
+  withCredentials: true 
+})
 
      if(respnse){
       console.log(respnse); 

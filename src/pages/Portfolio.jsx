@@ -1,7 +1,7 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Project from '../assets/images/service.jpg'
-import Portfoliobg from '../../public/images/portfolio-bg.png'
+import Portfoliobg from '/images/portfolio-bg.png'
 import React, { useEffect } from 'react'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
