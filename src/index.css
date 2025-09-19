@@ -204,7 +204,7 @@
   font-family: Loga, sans-serif !important;
 }
 .hero>.content>.brief {
-  width: 33%;
+  width: 56%;
   font-family: FKGrosteskLight, sans-serif !important;
   font-size: 1.3rem;
   min-width: 300px;
@@ -401,7 +401,7 @@
   width: 80%;
   height: 90%;
   aspect-ratio: 1;
-  border: 1px solid #fd982a;
+  border: 1px solid #ff3bff;
   background-color: black;
   display: flex;
   align-items: center;
@@ -417,7 +417,7 @@
 .values-left .back-shadow {
   width: 70%;
   height: 80%;
-  background: radial-gradient(circle, #fd982a 0%, rgba(255, 0, 0, 0) 80%);
+  background: radial-gradient(circle, #ff3bff 0%, rgba(255, 0, 0, 0) 80%);
   filter: blur(50px);
   border-radius: 12%;
   position: absolute;
@@ -1122,7 +1122,8 @@
 
 .portfolio-container .portfolio-container_left .project-image .overlay img{
   position:relative;
-  width: 30%;
+  width: 40%;
+  object-fit: contain;
 }
 .portfolio-container .portfolio-container_left .project-image img {
   object-fit: cover;

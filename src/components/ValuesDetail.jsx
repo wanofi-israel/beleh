@@ -4,10 +4,13 @@ import React, { useRef, useState } from "react";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import { useMediaQuery } from "react-responsive";
 import Logo from "../assets/images/blehLogo.png";
+import { useNavigate } from "react-router-dom";
 
 function ValuesDetail() {
   const box = useRef();
   const isMobile = useMediaQuery({ maxWidth: 666 });
+    const navigate=useNavigate()
+
   useGSAP(() => {
     if (!isMobile) {
       const contentTl = gsap.timeline({
@@ -37,7 +40,7 @@ function ValuesDetail() {
           },
           {
             background:
-              "radial-gradient(circle, #fd982a 0%, rgba(255,0,0,0) 80%)",
+              "radial-gradient(circle, #ff3bff 0%, rgba(255,0,0,0) 80%)",
           },
           0
         )
@@ -47,7 +50,7 @@ function ValuesDetail() {
             border: "1px solid rgba(51,112,255,1)",
           },
           {
-            border: "1px solid #fd982a",
+            border: "1px solid #ff3bff",
             ease: "none",
           },
           0
@@ -58,7 +61,7 @@ function ValuesDetail() {
             filter: "drop-shadow(15px 5px 30px rgba(51,112,255,1))",
           },
           {
-            filter: "drop-shadow(-15px -5px 30px #fd982a)",
+            filter: "drop-shadow(-15px -5px 30px #ff3bff)",
             ease: "none",
           },
           0
@@ -115,11 +118,14 @@ function ValuesDetail() {
             </p>
             <div className="cta-container">
               <button
+              onClick={()=>navigate("/about")}
+
                 className="cta-learn-more"
                 style={{
                   color: "var(--color-accent-blue)",
                   backgroundColor: "rgba(51,112,255,.2)",
                 }}
+              
               >
                 Learn more{" "}
                 <div className="icon">
@@ -139,12 +145,18 @@ function ValuesDetail() {
             </p>
             <div className="cta-container">
               <button
+              onClick={()=>navigate("/about")}
+
                 className="cta-learn-more"
-                style={{ color: "#fd982a", backgroundColor: "#fd972a7c" }}
+                style={{
+                  color: "var(--color-accent-blue)",
+                  backgroundColor: "rgba(51,112,255,.2)",
+                }}
               >
                 Learn more{" "}
                 <div className="icon">
-                  <ArrowForwardRoundedIcon sx={{ fill: "#fd982a" }} />
+              
+                  <ArrowForwardRoundedIcon sx={{ fill: "var(--color-accent-blue)" }} />
                 </div>
               </button>
             </div>
@@ -158,12 +170,18 @@ function ValuesDetail() {
             </p>
             <div className="cta-container">
               <button
+              onClick={()=>navigate("/about")}
+
                 className="cta-learn-more"
-                style={{ color: "#fd982a", backgroundColor: "#fd972a7c" }}
+                style={{
+                  color: "var(--color-accent-blue)",
+                  backgroundColor: "rgba(51,112,255,.2)",
+                }}
               >
                 Learn more{" "}
                 <div className="icon">
-                  <ArrowForwardRoundedIcon sx={{ fill: "#fd982a" }} />
+              
+                  <ArrowForwardRoundedIcon sx={{ fill: "var(--color-accent-blue)" }} />
                 </div>
               </button>
             </div>
@@ -176,12 +194,15 @@ function ValuesDetail() {
             </p>
             <div className="cta-container">
               <button
+              onClick={()=>navigate("/about")}
+
                 className="cta-learn-more"
-                style={{ color: "#fd982a", backgroundColor: "#fd972a7c" }}
+                style={{ color: "#ff3bff", backgroundColor: "#711b71ff" }}
               >
                 Learn more{" "}
                 <div className="icon">
-                  <ArrowForwardRoundedIcon sx={{ fill: "#fd982a" }} />
+              
+                  <ArrowForwardRoundedIcon sx={{ fill: "#ff3bff" }} />
                 </div>
               </button>
             </div>
@@ -194,12 +215,15 @@ function ValuesDetail() {
             </p>
             <div className="cta-container">
               <button
+              onClick={()=>navigate("/about")}
+
                 className="cta-learn-more"
-                style={{ color: "#fd982a", backgroundColor: "#fd972a7c" }}
+                style={{ color: "#ff3bff", backgroundColor: "#711b71ff" }}
               >
                 Learn more{" "}
                 <div className="icon">
-                  <ArrowForwardRoundedIcon sx={{ fill: "#fd982a" }} />
+              
+                  <ArrowForwardRoundedIcon sx={{ fill: "#ff3bff" }} />
                 </div>
               </button>
             </div>
