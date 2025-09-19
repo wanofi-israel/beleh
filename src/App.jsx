@@ -12,6 +12,7 @@ import ContactForm from "./components/ContactForm";
 import AboutUs from "./pages/AboutUs";
 import Services from "./pages/Services";
 import Map from "./components/Map";
+import NotFound from "./pages/NotFound";
 function App() {
   const vidRef=useRef(null)
   gsap.registerPlugin(SplitText, ScrollTrigger);
@@ -59,6 +60,7 @@ function App() {
             <Route path="/portfolio/:project" element={<Portfolio/>}/>
             <Route path="/about" element={<AboutUs/>}/>
             <Route path="/services" element={<Services/>}/>
+            <Route path="*" element={<NotFound/>}/>
           </Routes>
           <ContactUs />
           <ContactForm/>
