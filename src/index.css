@@ -176,12 +176,13 @@
 
 /* ---------------- HERO ---------------- */
 .hero {
-  height: 90vh;
-  min-height: 90vh;
+  height: auto;
+  min-height:90vh !important;
+  overflow: hidden;
   width: 100%;
   color: var(--color-text-blue-dark);
-  padding: var(--padding);
-  padding-top: 12vh;
+  margin-top: 12vh;
+  padding:var(--padding);
 }
 
 .hero>.content {
@@ -535,6 +536,7 @@
   flex-direction: column;
   gap: 2rem;
     min-width: 300px;
+    align-items: center;
 }
 
 .footer-top {
@@ -543,6 +545,9 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
+  width: 90%;
+  
+
 }
 
 /* .footer-logo img {
@@ -580,20 +585,22 @@
 .footer-description {
   font-size: 14px;
   color: #aaa;
-  margin-top: 20px;
   line-height: 1.5;
   flex: 1;
-  min-width: 280px;
+  min-width: 180px;
   text-align: justify;
 }
 
 .footer-bottom {
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
   gap: 20px;
+  width: 90%;
+  max-width: 90%;
 }
 
 .footer-links,
@@ -604,8 +611,7 @@
   flex-wrap: wrap;
   padding: 0;
   flex: 1;
-    min-width: 280px;
-    justify-content: center;
+  justify-content: center;
   }
   
   .footer-legal {
@@ -627,15 +633,17 @@
   display: flex;
   gap: 10px;
   flex: 1;
-    justify-content: center;
+  justify-content: flex-end;
 }
 
 .footer-social a {
   font-size: large;
   color: #f2f2f2;
   border: 0.5px solid #f2f2f2;
-  width: 50px;
-  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  flex: 1;
+  aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -647,7 +655,7 @@
   flex: 1;
     display: flex;
     justify-content: center;
-    min-width: 280px;
+    min-width: 180px;
 }
 
 .footer-middle {
@@ -655,6 +663,11 @@
   flex-direction: row;
   flex-wrap: wrap;
     gap: 2rem;
+    max-width: 90%;
+    width: 90%;
+  
+  justify-content: space-between;
+
 }
 
 /* ---------------- CONTACT US ---------------- */
@@ -1397,7 +1410,9 @@
 }
 .notfound-page a{
   color: var(--color-primary-blue);
-
+  display: flex;
+  align-items: center;
+  gap: .5rem;
 }
 
 
