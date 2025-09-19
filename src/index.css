@@ -300,8 +300,8 @@
   cursor: pointer;
 }
 .servicecard .click-div{
-  width: 20px;
-  height: 20px;
+  width: 5px;
+  height: 5px;
   z-index: 9999;
   position: absolute;
   background-color: transparent;
@@ -321,7 +321,7 @@
   display: block;
   border-radius: 100%;
   animation: 2s ease-in-out infinite forwards click;
-  animation-delay:.5s;
+  animation-delay:.6s;
 }
 .servicecard .servicecard-content {
   flex-flow: column;
@@ -1620,10 +1620,10 @@
   }
   50%{
     outline: 1px solid white;
-    outline-offset: .3rem;
+    outline-offset: 1rem;
   }
   100%{
-    outline-offset: .5rem;
+    outline-offset: 1rem;
 
   }
 }
