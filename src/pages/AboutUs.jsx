@@ -87,7 +87,7 @@ function AboutUs() {
     <>
       <div className="about-us_page hero">
         <div className="content">
-          <div className="fade-in slogan">
+          <div className="fade-in slogan about">
             <h1>
               Founded on
               <br /> a Passion for <br />

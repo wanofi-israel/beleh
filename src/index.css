@@ -194,6 +194,12 @@
 }
 
 .hero>.content>.slogan {
+  font-size: clamp(3.5rem, 5vw, 6.6rem);
+  margin-block: auto;
+  line-height: 1;
+  min-width: 300px;
+}
+.hero>.content>.slogan.about {
   font-size: clamp(2.5rem, 5vw, 6.6rem);
   margin-block: auto;
   line-height: 1;
@@ -229,6 +235,9 @@
 .hero-container{
   display: flex;
   flex-direction: row;
+}
+.hero-container>*{
+  flex: 1;
 }
 .hero-image{
   width: 40%;
@@ -293,7 +302,7 @@
   height: 100%;
   min-height: fit-content;
   border: 1.5px solid var(--color-primary-blue);
-  background:linear-gradient(rgba(0, 0, 0, 0.185)),url(./assets/images/service.jpg);
+  background:linear-gradient(rgba(0, 0, 0, 0.185)),url("./assets/images/service.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -807,9 +816,6 @@
   color: var(--color-text-blue);
   transition: all 1s ease;
 
-  h2 {
-    transition: all 0.3s ease;
-  }
 }
 
 
@@ -1143,19 +1149,6 @@
   overflow: hidden;
   position: relative;
 }
-.about-text{
-   width: 33%;
-  font-family: FKGrosteskLight, sans-serif !important;
-  font-size: 1.3rem;
-  min-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  color: var(--color-bg-bluish);
-  font-weight: lighter;
-  text-wrap: wrap;
-  
-}
 
 .about-container{
   display: flex;
@@ -1302,7 +1295,7 @@
 }
 
 .services-page>.content>.brief {
-  width: 33%;
+  width: 56%;
   font-family: FKGrosteskLight, sans-serif !important;
   font-size: 1.3rem;
   min-width: 300px;
@@ -1326,6 +1319,7 @@
   border-bottom: 1px solid var(--color-primary-blue);
   z-index:0;
   transition: padding .3s ease-in-out, background-color .3s ease-in-out;
+  cursor: pointer;
 }
 .services-page .services-list .service-rw.hover{
   z-index: 2;
@@ -1424,9 +1418,11 @@
       padding-inline: 0rem;
     }
     .portfolio-container .portfolio-left{
+      top: 40%;
       left:1rem;
     }
     .portfolio-container .portfolio-right{
+      top: 40%;
       right: 1rem;
     }
     
@@ -1504,7 +1500,7 @@
   .navbar-right {
     position: fixed;
     display: none;
-    background-color: rgba(0, 0, 0, 0.164);
+    background-color: rgba(175, 175, 175, 0.164);
     backdrop-filter: blur(40px);
     height: 88dvh;
     width: 100%;

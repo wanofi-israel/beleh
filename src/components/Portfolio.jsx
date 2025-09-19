@@ -3,6 +3,7 @@ import gsap from 'gsap'
 import TeleBirr from "../assets/images/TeleBirr.png"
 import Tedla from "../assets/images/Tedla.png"
 import CBE from "../assets/images/CBE.png"
+import Hibret from "../assets/images/Hibret.png"
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -63,17 +64,18 @@ function Portfolio() {
         </div>
         <div className="portfolio-top_right">
             <div className="projects" onClick={()=>navigate('/portfolio/Tele-Birr')}>
-                <img src={TeleBirr} alt="CBE-Logo" width="40%"/>
+                <img src={TeleBirr} alt="CBE-Logo" width="30%"/>
             </div>
             <div className="projects" onClick={()=>navigate('/portfolio/Tedla-Ambulance')}>
-                                <img src={Tedla} alt="CBE-Logo" width="40%"/>
+                                <img src={Tedla} alt="CBE-Logo" width="30%"/>
 
             </div>
-            <div className="projects" onClick={()=>navigate('/portfolio/Zekuria')}>
-                <h2>Zekuria</h2>
+            <div className="projects" onClick={()=>navigate('/portfolio/Hibret Bank')}>
+                                <img src={Hibret} alt="Hibret-Logo" width="30%"/>
+
             </div>
             <div className="projects" onClick={()=>navigate('/portfolio/CBE')}>
-                <img src={CBE} alt="CBE-Logo" width="40%"/>
+                <img src={CBE} alt="CBE-Logo" width="30%"/>
             </div>
         </div>
       </div>
