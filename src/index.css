@@ -291,7 +291,7 @@
   grid-gap: 1rem;
   padding: var(--padding);
   height: fit-content;
-  place-items: start;
+  place-items: center;
 }
 
 .servicecard {

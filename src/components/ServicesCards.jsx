@@ -3,10 +3,10 @@ import gsap from 'gsap'
 import React from 'react'
 import ServiceCard from './ServiceCard'
 import { useMediaQuery } from 'react-responsive'
-import Lyric from "../assets/images/lyrics.jpg"
-import Instrumental from "../assets/images/instrumental.jpg"
+import Lyric from "../assets/images/lyrics.png"
+import Instrumental from "../assets/images/instrumental.png"
 import Composition from "../assets/images/composition.jpg"
-import Mixing from "../assets/images/mixing.jpg"
+import Mixing from "../assets/images/mixing.png"
 import OneStop from "../assets/images/onestop.jpg"
 import { useNavigate } from 'react-router-dom'
 
