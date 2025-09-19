@@ -1456,10 +1456,11 @@
     flex-direction: column;
     padding: 1rem;
     min-width: none;
-    min-height: fit-content;
+    min-height: fit-content !important;
   }
   
   .values-right .content {
+    
     height: 100% !important;
     display: flex;
     flex-direction: column;

@@ -74,6 +74,9 @@ function AboutUs() {
             gsap.to('.logoDark',{
                 display:'flex'
             },0)
+            // gsap.to('.nav-bar',{
+            //     color:'var(--color-text-blue)'
+            // },0)
   }, []);
 
 
