@@ -5,6 +5,7 @@ import React, { useState } from "react";
 
 
 const ContactForm = () => {
+  const [loading,setLoading]=useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,7 +18,7 @@ const ContactForm = () => {
   };
 
   const handleSubmit =async (e) => {
-    
+    setLoading(true)
     e.preventDefault();
     try {
      const respnse=await axios.post(`${import.meta.env.VITE__URL}`,formData, {
@@ -28,12 +29,13 @@ const ContactForm = () => {
 })
 
      if(respnse){
-      console.log(respnse); 
+      setFormData({ name: "", email: "", phone: "", message: "" });
      }
     } catch (error) {
       console.log(error);
+    } finally{
+      setLoading(false)
     }
-    setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
   useGSAP(()=>{
@@ -119,7 +121,7 @@ const ContactForm = () => {
           />
         </label>
 
-        <button type="submit">OK</button>
+        <button type="submit">{loading?"...":"Send"}</button>
       </form>
     </div>
     </div>

@@ -65,17 +65,21 @@ function Portfolio() {
         <div className="portfolio-top_right">
             <div className="projects" onClick={()=>navigate('/portfolio/Tele-Birr')}>
                 <img src={TeleBirr} alt="CBE-Logo" width="30%"/>
+                
             </div>
             <div className="projects" onClick={()=>navigate('/portfolio/Tedla-Ambulance')}>
                                 <img src={Tedla} alt="CBE-Logo" width="30%"/>
+                                
 
             </div>
             <div className="projects" onClick={()=>navigate('/portfolio/Hibret Bank')}>
                                 <img src={Hibret} alt="Hibret-Logo" width="30%"/>
+                                
 
             </div>
             <div className="projects" onClick={()=>navigate('/portfolio/CBE')}>
                 <img src={CBE} alt="CBE-Logo" width="30%"/>
+                
             </div>
         </div>
       </div>
