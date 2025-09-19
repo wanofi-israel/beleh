@@ -1390,8 +1390,10 @@
   justify-content: center;
   gap: 1rem;
   font-family: FKGrosteskLight, sans-serif !important;
-  font-size:clamp(1rem,2vw,4.5rem);
   color: var(--color-primary-blue);
+}
+.notfound-page h1{
+  font-size:clamp(1rem,2vw,4.5rem);
 }
 .notfound-page a{
   color: var(--color-primary-blue);
