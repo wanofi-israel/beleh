@@ -3,6 +3,7 @@ import gsap from 'gsap'
 import React from 'react'
 import ServiceCard from './ServiceCard'
 import { useMediaQuery } from 'react-responsive'
+import { useNavigate } from 'react-router-dom'
 
 function ServicesCards() {
     const isMobile=useMediaQuery({maxWidth:819.5})
