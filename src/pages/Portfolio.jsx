@@ -1,6 +1,7 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Project from '../assets/images/service.jpg'
+import Portfoliobg from '../../public/images/portfolio-bg.png'
 import React, { useEffect } from 'react'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
@@ -146,7 +147,7 @@ function Portfolio() {
         ><KeyboardArrowRightIcon sx={{fontSize:52,transform:"rotate(-45deg)"}}/></div>
         <div className="portfolio-container_left">
             <div className="project-image">
-            <img src={Project} alt="portfolio-image" width='100%' height='100%' />
+            <img src={Portfoliobg} alt="portfolio-image" width='100%' height='100%' />
             <div className="overlay">
               <img src={portfolio[currentIndex]?.logo} alt={`${portfolio[currentIndex]?.company_name}-Logo`} width="60%"/>
             </div>

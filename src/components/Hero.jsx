@@ -59,6 +59,7 @@ function Hero() {
         })
         },[])
   return (
+   <div className='hero-container'> 
     <div className='hero'>
         <div className="content">
             <div className="fade-in slogan">
@@ -76,6 +77,8 @@ function Hero() {
         </div>
       </div>
         </div>
+    </div>
+    <img className='hero-image' src='../../public/images/bleh crop.png'/>
     </div>
   )
 }

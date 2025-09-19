@@ -194,7 +194,7 @@
 }
 
 .hero>.content>.slogan {
-  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  font-size: clamp(2.5rem, 5vw, 6.6rem);
   margin-block: auto;
   line-height: 1;
   min-width: 300px;
@@ -226,7 +226,24 @@
     text-decoration: none;
     cursor: pointer;
 }
+.hero-container{
+  display: flex;
+  flex-direction: row;
+}
+.hero-image{
+  width: 40%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}
 
+@media (max-width:1000px){
+  .hero-image{
+    display: none;
+  }
+}
 /* ---------------- SERVICES ---------------- */
 .services {
   display: flex;
@@ -1072,7 +1089,7 @@
   position: absolute;
   inset: 0;
   height: 100%;
-  background: linear-gradient(rgba(2, 20, 61, 0.548));
+  background: linear-gradient(rgba(2, 20, 61, 0.3));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1568,3 +1585,4 @@
 .stop-scrolling {
   overflow: clip !important;
 }
+
