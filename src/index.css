@@ -177,11 +177,11 @@
 /* ---------------- HERO ---------------- */
 .hero {
   height: auto;
-  min-height:90vh !important;
+  min-height:88vh !important;
   overflow: hidden;
   width: 100%;
   color: var(--color-text-blue-dark);
-  padding-top: 12vh;
+  /* padding-top: 12vh; */
   padding:var(--padding);
 }
 
@@ -195,7 +195,7 @@
 }
 
 .hero>.content>.slogan {
-  font-size: clamp(3.5rem, 5vw, 6.6rem);
+  font-size: clamp(3rem, 6vw, 5.6rem);
   margin-block: auto;
   line-height: 1;
   min-width: 300px;
@@ -213,7 +213,7 @@
 .hero>.content>.brief {
   width: 56%;
   font-family: FKGrosteskLight, sans-serif !important;
-  font-size: 1.3rem;
+    font-size: clamp(1rem,2.7vw,1.5rem);
   min-width: 300px;
   display: flex;
   flex-direction: column;
