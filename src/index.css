@@ -176,12 +176,13 @@
 
 /* ---------------- HERO ---------------- */
 .hero {
-  height: 90vh;
-  min-height: 90vh;
+  height: auto;
+  min-height:88vh !important;
+  overflow: hidden;
   width: 100%;
   color: var(--color-text-blue-dark);
-  padding: var(--padding);
-  padding-top: 12vh;
+  /* padding-top: 12vh; */
+  padding:var(--padding);
 }
 
 .hero>.content {
@@ -194,6 +195,12 @@
 }
 
 .hero>.content>.slogan {
+  font-size: clamp(3rem, 6vw, 5.6rem);
+  margin-block: auto;
+  line-height: 1;
+  min-width: 300px;
+}
+.hero>.content>.slogan.about {
   font-size: clamp(2.5rem, 5vw, 6.6rem);
   margin-block: auto;
   line-height: 1;
@@ -206,7 +213,7 @@
 .hero>.content>.brief {
   width: 56%;
   font-family: FKGrosteskLight, sans-serif !important;
-  font-size: 1.3rem;
+    font-size: clamp(1rem,2.7vw,1.5rem);
   min-width: 300px;
   display: flex;
   flex-direction: column;
@@ -229,6 +236,9 @@
 .hero-container{
   display: flex;
   flex-direction: row;
+}
+.hero-container>*{
+  flex: 1;
 }
 .hero-image{
   width: 40%;
@@ -289,10 +299,11 @@ max-width: 20%;
   grid-gap: 1rem;
   padding: var(--padding);
   height: fit-content;
-  place-items: start;
+  place-items: center;
 }
 
 .servicecard {
+  position: relative;
   overflow: hidden;
   /* flex: 1; */
   min-width: 190px;
@@ -300,11 +311,30 @@ max-width: 20%;
   height: 100%;
   min-height: fit-content;
   border: 1.5px solid var(--color-primary-blue);
-  background:linear-gradient(rgba(0, 0, 0, 0.185)),url(./assets/images/service.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   cursor: pointer;
+}
+.servicecard .servicecard-bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.servicecard .servicecard-bg::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg,#0a2448,#0a24486b) ;
+  display: block;
+  z-index: 4;
+}
+.servicecard .servicecard-bg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .servicecard .click-div{
   width: 5px;
@@ -513,6 +543,7 @@ max-width: 20%;
   flex-direction: column;
   gap: 2rem;
     min-width: 300px;
+    align-items: center;
 }
 
 .footer-top {
@@ -521,6 +552,9 @@ max-width: 20%;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
+  width: 90%;
+  
+
 }
 
 /* .footer-logo img {
@@ -558,20 +592,22 @@ max-width: 20%;
 .footer-description {
   font-size: 14px;
   color: #aaa;
-  margin-top: 20px;
   line-height: 1.5;
   flex: 1;
-  min-width: 280px;
+  min-width: 180px;
   text-align: justify;
 }
 
 .footer-bottom {
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
   gap: 20px;
+  width: 90%;
+  max-width: 90%;
 }
 
 .footer-links,
@@ -582,8 +618,7 @@ max-width: 20%;
   flex-wrap: wrap;
   padding: 0;
   flex: 1;
-    min-width: 280px;
-    justify-content: center;
+  justify-content: center;
   }
   
   .footer-legal {
@@ -605,15 +640,17 @@ max-width: 20%;
   display: flex;
   gap: 10px;
   flex: 1;
-    justify-content: center;
+  justify-content: flex-end;
 }
 
 .footer-social a {
   font-size: large;
   color: #f2f2f2;
   border: 0.5px solid #f2f2f2;
-  width: 50px;
-  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  flex: 1;
+  aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -625,7 +662,7 @@ max-width: 20%;
   flex: 1;
     display: flex;
     justify-content: center;
-    min-width: 280px;
+    min-width: 180px;
 }
 
 .footer-middle {
@@ -633,6 +670,11 @@ max-width: 20%;
   flex-direction: row;
   flex-wrap: wrap;
     gap: 2rem;
+    max-width: 90%;
+    width: 90%;
+  
+  justify-content: space-between;
+
 }
 
 /* ---------------- CONTACT US ---------------- */
@@ -814,9 +856,6 @@ max-width: 20%;
   color: var(--color-text-blue);
   transition: all 1s ease;
 
-  h2 {
-    transition: all 0.3s ease;
-  }
 }
 
 
@@ -1150,19 +1189,6 @@ max-width: 20%;
   overflow: hidden;
   position: relative;
 }
-.about-text{
-   width: 33%;
-  font-family: FKGrosteskLight, sans-serif !important;
-  font-size: 1.3rem;
-  min-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  color: var(--color-bg-bluish);
-  font-weight: lighter;
-  text-wrap: wrap;
-  
-}
 
 .about-container{
   display: flex;
@@ -1309,7 +1335,7 @@ max-width: 20%;
 }
 
 .services-page>.content>.brief {
-  width: 33%;
+  width: 56%;
   font-family: FKGrosteskLight, sans-serif !important;
   font-size: 1.3rem;
   min-width: 300px;
@@ -1333,6 +1359,7 @@ max-width: 20%;
   border-bottom: 1px solid var(--color-primary-blue);
   z-index:0;
   transition: padding .3s ease-in-out, background-color .3s ease-in-out;
+  cursor: pointer;
 }
 .services-page .services-list .service-rw.hover{
   z-index: 2;
@@ -1374,7 +1401,26 @@ max-width: 20%;
   height: 100%;
   object-fit: cover;
 }
-
+.notfound-page{
+  width: 100%;
+  height: 100dvh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: FKGrosteskLight, sans-serif !important;
+  color: var(--color-primary-blue);
+}
+.notfound-page h1{
+  font-size:clamp(1rem,2vw,4.5rem);
+}
+.notfound-page a{
+  color: var(--color-primary-blue);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
 
 
 
@@ -1431,9 +1477,11 @@ max-width: 20%;
       padding-inline: 0rem;
     }
     .portfolio-container .portfolio-left{
+      top: 40%;
       left:1rem;
     }
     .portfolio-container .portfolio-right{
+      top: 40%;
       right: 1rem;
     }
     
@@ -1511,7 +1559,7 @@ max-width: 20%;
   .navbar-right {
     position: fixed;
     display: none;
-    background-color: rgba(0, 0, 0, 0.164);
+    background-color: rgba(175, 175, 175, 0.164);
     backdrop-filter: blur(40px);
     height: 88dvh;
     width: 100%;

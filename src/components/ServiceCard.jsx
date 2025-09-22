@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-function ServiceCard({ text, brief }) {
+function ServiceCard({ text, brief,bgImage }) {
   const navigate = useNavigate();
   const clickRef = useRef(null);
   const cardRef = useRef(null);
@@ -26,6 +26,9 @@ function ServiceCard({ text, brief }) {
       }}
       onMouseMove={handleMouseMove}
     >
+      <div className="servicecard-bg">
+        <img src={bgImage} alt={text}/>
+      </div>
       <div className="click-div" ref={clickRef}></div>
       <div className="servicecard-content">
         <h3>{text}</h3>
