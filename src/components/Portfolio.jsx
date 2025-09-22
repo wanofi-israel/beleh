@@ -4,6 +4,10 @@ import TeleBirr from "../assets/images/TeleBirr.png"
 import Tedla from "../assets/images/Tedla.png"
 import CBE from "../assets/images/CBE.png"
 import Hibret from "../assets/images/Hibret.png"
+import Ovid from "/images/ovid.svg"
+import TTK from "/images/ttk.png"
+import Allinone from "/images/allinone.png"
+import Kestedamena from "/images/kestedemena.png"
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -90,22 +94,22 @@ function Portfolio() {
             </h3>
         </div>
         <div className="portfolio-top_right">
-            <div className="projects" onClick={()=>navigate('/portfolio/Tele-Birr')}>
-                <img src={TeleBirr} alt="CBE-Logo" width="30%"/>
+            <div className="projects" onClick={()=>navigate('/portfolio/Ovid Real Estate')}>
+                <img src={Ovid} alt="CBE-Logo" width="30%"/>
                 
             </div>
-            <div className="projects" onClick={()=>navigate('/portfolio/Tedla-Ambulance')}>
-                                <img src={Tedla} alt="CBE-Logo" width="30%"/>
+            <div className="projects" onClick={()=>navigate('/portfolio/All in One Market')}>
+                                <img src={Allinone} alt="CBE-Logo" width="30%"/>
                                 
 
             </div>
-            <div className="projects" onClick={()=>navigate('/portfolio/Hibret Bank')}>
-                                <img src={Hibret} alt="Hibret-Logo" width="30%"/>
+            <div className="projects" onClick={()=>navigate('/portfolio/Sky Soap')}>
+                                <img src={TTK} alt="Hibret-Logo" width="30%"/>
                                 
 
             </div>
-            <div className="projects" onClick={()=>navigate('/portfolio/CBE')}>
-                <img src={CBE} alt="CBE-Logo" width="30%"/>
+            <div className="projects" onClick={()=>navigate('/portfolio/Kestedemena')}>
+                <img src={Kestedamena} alt="CBE-Logo" width="30%"/>
                 
             </div>
         </div>

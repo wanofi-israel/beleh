@@ -101,7 +101,7 @@ function AboutUs() {
               </div>
             </div>
           </div>
-          <div className="fade-in brief">
+          <div className="fade-in brief about">
             <p>
               Bleh Jingles is a premier jingle and promotional sound production
               company with over a decade of experience in crafting memorable

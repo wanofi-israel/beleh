@@ -2,7 +2,7 @@ import React from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { SplitText } from 'gsap/all'
-import Mega from '../assets/images/mega.png'
+import Mega from '../assets/images/megaphone.png'
 function Services() {
     useGSAP(()=>{
         const splitService=new SplitText('.fade-in_service',{type:'lines'})
@@ -34,7 +34,7 @@ function Services() {
   return (
     <div className="services" id="services">
       <div className='amplified'>
-        <img src={Mega}/>
+        <img src={Mega} className='mega-icon'/>
       <h3 className='fade-in_service'>
         Your Brand<br/>Voice Amplified
         {/* We envision a transformative <br /> decade ahead */}
