@@ -68,21 +68,21 @@ function Portfolio() {
         </div>
         <div className="portfolio-top_right">
             <div className="projects" onClick={()=>navigate('/portfolio/Tele-Birr')}>
-                <img src={TeleBirr} alt="CBE-Logo" width="30%"/>
+                <img src={TeleBirr} alt="CBE-Logo" width="40%"/>
                 
             </div>
             <div className="projects" onClick={()=>navigate('/portfolio/Tedla-Ambulance')}>
-                                <img src={Tedla} alt="CBE-Logo" width="30%"/>
+                                <img src={Tedla} alt="CBE-Logo" width="40%"/>
                                 
 
             </div>
             <div className="projects" onClick={()=>navigate('/portfolio/Hibret Bank')}>
-                                <img src={Hibret} alt="Hibret-Logo" width="30%"/>
+                                <img src={Hibret} alt="Hibret-Logo" width="40%"/>
                                 
 
             </div>
             <div className="projects" onClick={()=>navigate('/portfolio/CBE')}>
-                <img src={CBE} alt="CBE-Logo" width="30%"/>
+                <img src={CBE} alt="CBE-Logo" width="40%"/>
                 
             </div>
         </div>
@@ -95,21 +95,21 @@ function Portfolio() {
         </div>
         <div className="portfolio-top_right">
             <div className="projects" onClick={()=>navigate('/portfolio/Ovid Real Estate')}>
-                <img src={Ovid} alt="CBE-Logo" width="30%"/>
+                <img src={Ovid} alt="CBE-Logo" width="40%"/>
                 
             </div>
             <div className="projects" onClick={()=>navigate('/portfolio/All in One Market')}>
-                                <img src={Allinone} alt="CBE-Logo" width="30%"/>
+                                <img src={Allinone} alt="CBE-Logo" width="40%"/>
                                 
 
             </div>
             <div className="projects" onClick={()=>navigate('/portfolio/Sky Soap')}>
-                                <img src={TTK} alt="Hibret-Logo" width="30%"/>
+                                <img src={TTK} alt="Hibret-Logo" width="40%"/>
                                 
 
             </div>
             <div className="projects" onClick={()=>navigate('/portfolio/Kestedemena')}>
-                <img src={Kestedamena} alt="CBE-Logo" width="30%"/>
+                <img src={Kestedamena} alt="CBE-Logo" width="40%"/>
                 
             </div>
         </div>

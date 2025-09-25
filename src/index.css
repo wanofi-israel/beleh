@@ -181,8 +181,8 @@
   overflow: hidden;
   width: 100%;
   color: var(--color-text-blue-dark);
-  /* padding-top: 12vh; */
   padding:var(--padding);
+  padding-top: 12vh;
 }
 
 .hero>.content {
@@ -194,7 +194,7 @@
 }
 
 .hero>.content>.slogan {
-  font-size: clamp(3rem, 6vw, 5.6rem);
+  font-size: clamp(3rem, 6vw, 4.6rem);
   margin-block: auto;
   line-height: 1;
   min-width: 300px;
@@ -212,7 +212,7 @@
 .hero>.content>.brief {
   width: 66%;
   font-family: FKGrosteskLight, sans-serif !important;
-    font-size: clamp(1.2rem,2.7vw,1.5rem);
+    font-size: clamp(1.2rem,2.7vw,1.3rem);
   min-width: 300px;
   display: flex;
   flex-direction: column;
