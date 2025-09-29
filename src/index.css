@@ -423,8 +423,8 @@ max-width: 20%;
 }
 
 .container {
-  min-height: fit-content;
-  height: 100dvh;
+  min-height: 100dvh;
+    height: auto;
   flex: 1;
   display: flex;
   width: 100%;
