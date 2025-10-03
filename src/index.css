@@ -423,8 +423,8 @@ max-width: 20%;
 }
 
 .container {
-  min-height: 100dvh;
-    height: auto;
+  min-height: fit-content;
+  height: 100dvh;
   flex: 1;
   display: flex;
   width: 100%;
@@ -1509,6 +1509,8 @@ max-width: 20%;
     padding-block: 2rem;
   }
   .container {
+    min-height: 100dvh;
+    height: auto;
     flex-direction: column;
     gap: 2rem;
   }
